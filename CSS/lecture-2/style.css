@@ -1,0 +1,48 @@
+h4{
+    background-color: deeppink;
+}
+
+/* When apply multiple property then css apply last style, means overwrite (top to bottom apply) */
+p{
+    color: brown;
+    background-color:burlywood;
+}
+
+p{
+    color:aqua;
+    background-color:cornflowerblue;
+}
+
+/* Diffrent between body and universal selector */
+/* *{
+    color: royalblue;
+} */
+/* body{
+    color: red;
+} */
+
+/* Id Selector */
+#game{
+    color: chartreuse;
+}
+
+#freeFire{
+    color: darkblue;
+}
+
+/* Class selector */
+.cod{
+    color: hotpink;
+    background-color: khaki;
+}
+
+.pubg{
+    color: yellow;
+    background-color: red;
+}
+
+/* Grouping Selector */
+.box1,p,h4{
+    background-color: chocolate;
+}
+

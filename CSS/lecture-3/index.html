@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--  Apply !important rule -->
+    <style>
+        p{
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- topic :
+           1. !important value
+           2. cascade, specificity, inheritance
+           3. css box model
+           4. accepteble value
+           5. @import value
+     -->
+
+     <!-- !important : The !important keyword in css is used to give a style declration higher priority than normal.  -->
+
+     <p style="color: darkorange;">This i is inline style </p>
+
+     <!-- cascade : overwrite css -->
+
+     <h1>This is cascade style</h1>
+
+     <!-- specificity (ordered - inline, id, class, element name) -->
+     <h4 id="specificity_id" class="specificity_class">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, provident?</h4>
+
+     <!-- Inheritance : inheritance is the process by which styles applied to a parent element are inheritance by its children. -->
+
+     <div class="parent">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+     </div>
+
+     <!-- @import value: apply css in other file and then import file. -->
+
+     <h6>import value</h6>
+</body>
+</html>

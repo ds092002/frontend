@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 3px solid;
+            border-collapse: collapse;
+            width: 900px;
+            height: 50px;
+            text-align: start;
+        }
+        .block{
+            border: 0;
+            border-collapse: collapse;
+        }
+        .border{
+            border: 0;
+        }
+        p{
+            display: flex;
+            padding: 0px 0 50px 0;
+            margin: 0px 0 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <table class="border" border="1" align="center">
+        <tr>
+            <td colspan="2" rowspan="2">
+                <p>r1c1</p>
+            </td>
+            <td>r1c3</td>
+            <td rowspan="2">r1c4</td>
+            <td colspan="2" rowspan="2">r1c5</td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">r2c3</td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+        <tr>
+            <td colspan="2">r3c1</td>
+            <td colspan="2">r3c4</td>
+            <td>r3c6</td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+        <tr>
+            <td>r4c1</td>
+            <td colspan="2">r4c2</td>
+            <td rowspan="2">r4c4</td>
+            <td colspan="2">r4c5</td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">r5c1</td>
+            <td rowspan="2">r5c3</td>
+            <td colspan="2" rowspan="2">r5c5</td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+        <tr>
+            <td>r6c4</td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+        <tr>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+            <td class="block"></td>
+        </tr>
+    </table>
+</body>
+</html>

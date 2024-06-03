@@ -1,0 +1,86 @@
+.box {
+  width: 100px;
+  height: 100px;
+  color: orangered;
+  border: 5px solid green;
+  border-radius: 0px 15px 0px 15px;
+  background-color: cadetblue;
+  margin: 100px;
+  padding: 10px;
+  outline: 35px double orchid;
+  outline-offset: 15px;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  color: orangered;
+  border: 5px solid green;
+  border-radius: 15px 0px 15px 0px;
+  background-color: cadetblue;
+  margin: 100px;
+  padding: 10px;
+  outline: 35px double orchid;
+  outline-offset: 15px;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+.box3 {
+  width: 100px;
+  height: 100px;
+  color: orangered;
+  border: 5px solid green;
+  border-radius: 15px 0px 15px 0px;
+  background-color: cadetblue;
+  margin: 100px;
+  padding: 10px;
+  outline: 35px double orchid;
+  outline-offset: 15px;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+.box4 {
+  width: 100px;
+  height: 100px;
+  color: orangered;
+  border: 5px solid green;
+  border-radius: 0px 15px 0px 15px;
+  background-color: cadetblue;
+  margin: 100px;
+  padding: 10px;
+  outline: 35px double orchid;
+  outline-offset: 15px;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+.container {
+  display: flex;
+}
+.round {
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+  border-radius: 50%;
+  margin: 0 auto;
+  outline: 35px double orchid;
+}
+
+.main {
+  width: 600px;
+  object-fit: cover;
+}
+
+
+/* Hidden */
+.hidden{
+  visibility: hidden;
+}

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 1px solid black;
+    margin-top: 15px;
+}
+
+.box1{
+    position: relative;
+    top: 200px;
+    left: 200px;
+    height: 100px;
+    width: 100px;
+    color: blue;
+    background: aqua;
+    border: 1px solid black;
+}
+
+.box2{
+    position: relative;
+    top: 100px;
+    left: 200px;
+    height: 100px;
+    width: 100px;
+    color: crimson;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}
+
+.box3{
+    height: 100px;
+    width: 100px;
+    color:brown;
+    background-color: lightpink;
+    border: 1px solid black;
+}

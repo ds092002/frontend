@@ -1,0 +1,197 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 50px;
+  }
+  
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #20B2AA; */
+    min-height: 100vh;
+    padding: 10px;
+    
+  }
+  
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px; 
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 85%;
+    margin: auto;
+    gap: 4%;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px black;
+  }
+  
+  .one{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .two{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .three{
+    background-color: #fff;
+    color: black;
+    /* border: 1px; */
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .four{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .five{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .six{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dot{
+    background-color: #fff;
+    color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .material-symbols-outlined{
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 55px !important;
+    cursor: pointer;
+  }
+
+  .one:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .two:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .three:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .four:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .five:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .six:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .dot:active {
+    background-color: blue;
+    border: 1px solid blue;
+    color: #fff;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }
+  .material-symbols-outlined:active {
+    background-color: blue;
+    color: #000;
+    border: 1px solid black;
+    box-shadow: 5px 5px #666;
+    transform: translateY(4px);
+  }

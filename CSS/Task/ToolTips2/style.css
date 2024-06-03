@@ -1,0 +1,75 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+    ;
+}
+
+.container {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 10px;
+    margin-top: 100px;
+    margin-left: 400px;
+    background-color: #f4eeee;
+    box-shadow: 10px 10px 30px rgb(234, 200, 200);
+    border-radius: 10px;
+    width:500px;
+    height: 200px;
+
+}
+
+.box1 a {
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+
+}
+
+.box2 a {
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+
+}
+
+.box2:hover .tootrip {
+    visibility: visible;
+}
+
+.tootrip {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(49, 46, 46);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: -30px;
+}
+
+.box3 a {
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
+
+.box4 a {
+    background-color: rgb(82, 82, 229);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+
+}

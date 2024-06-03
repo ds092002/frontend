@@ -1,0 +1,100 @@
+*{
+    margin  : 20px;
+    box-sizing: border-box; 
+}
+
+
+.line1{
+    border: 2px dotted black;
+    display: flex;
+    /* border-width: 5px; */
+}
+.l1b1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: static;
+}
+.l1b2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: static;
+}
+.l1b3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: static;
+}
+.l1b4{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: static;
+}
+
+
+.line2{
+    border: 2px dotted black;
+    display: flex;
+}
+.l2b1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+}
+.l2b2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    top: 20px;
+    left: 60px;
+    z-index: 1;
+}
+.l2b3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+}
+.l2b4{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+}
+
+
+.line3{
+    border: 2px dotted black;
+    display: flex;
+}
+.l3b1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* position: static; */
+    z-index: 1;
+}
+.l3b2{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    /* top: ; */
+}   
+.l3b3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* position: static; */
+}
+.l3b4{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* position: static; */
+}

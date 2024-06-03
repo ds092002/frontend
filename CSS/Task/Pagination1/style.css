@@ -1,0 +1,180 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  font-size: 50px;
+  color: #20B2AA;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #20B2AA;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border: 1px solid white;
+  border-radius: 50px;
+  width: 85%;
+  margin: auto;
+  gap: 4%;
+  box-shadow: 10px 10px 5px black;
+  background-color: antiquewhite;
+}
+
+.material-symbols-outlined{
+  font-size: 49px !important;
+}
+
+.one{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.dot1{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.nine{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.dot2{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.elevan{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.twenty{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ten{
+  border: 1px solid gray;
+  background-color: white;
+  color: #20B2AA;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.one:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
+.dot1:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
+.nine:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
+.elevan:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
+.dot2:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
+.twenty:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}
+.ten:active {
+  background-color: #20B2AA;
+  color: aliceblue;
+  box-shadow: 5px 5px #666;
+  transform: translateY(4px);
+}

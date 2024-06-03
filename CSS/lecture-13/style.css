@@ -1,0 +1,123 @@
+/* CSS Transfrom */
+
+.path1{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.translate1{
+    height: 100px;
+    width: 100px;
+    background-color: goldenrod;
+}
+.path1:hover .translate1{
+    transform: translate(400px, 500px);
+    /* transform: translate(400px); */
+    /* transform: translateY(400px); */
+    transition: 5s;
+    /* transform: rotate(45deg); */
+    /* transform: rotateY(45deg); */
+    /* transform : scale(0.5) ; */
+    /* transform : scaleY(0.5) ; */
+    /* transform: skew(70deg, 45deg); */
+    /* transform: skewY(45deg) */
+}
+
+.path2{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.translate2{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(32, 218, 137);
+}
+.path2:hover .translate2{
+    transform: translate(500px, 600px);
+    /* transform: translate(400px); */
+    /* transform: translateY(400px); */
+    transition: 5s;
+    /* transform: rotate(90deg); */
+    /* transform: rotateY(90deg); */
+    /* transform : scale(2); */
+    /* transform : scaleY(2); */
+    /* transform: skew(90deg, 55deg); */
+    /* transform: skewY(45deg) */
+}
+
+.path3{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.translate3{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(218, 32, 144);
+}
+
+.path3:hover .translate3{
+    transform: translate(600px, 700px);
+    /* transform: translate(400px); */
+    /* transform: translateY(400px); */
+    transition: 5s;
+    /* transform: rotate(135deg); */
+    /* transform: rotateY(135deg); */
+    /* transform : scale(1.5); */
+    /* transform : scaleY(1.5); */
+    /* transform: skew(90deg, 45deg); */
+    /* transform: skewY(45deg) */
+}
+
+
+/* .image{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+}
+
+img:hover{
+    transform: scale(1.5);
+    transition: 2s;
+} */
+
+
+/* CSS Transtion */
+
+/* <!-- Transition-Duration -->
+<!-- 
+    ex:-  transition-duration: 1s;
+-->
+
+<!-- Transition-Delay -->
+<!-- 
+    ex:-  transition-delay: 1s;
+-->
+
+<!-- Transition-Property -->
+<!-- 
+    ex:-  transition-property: all;
+--> */
+
+.transition{
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+}
+
+.path:hover .transition{
+    width: 500px;
+    height: 500px;
+    transform: translate(900px);
+    transition-delay: 2s;
+    transition-duration: 5s;
+    transition-property: width height transfrom;
+    transition-timing-function: ease;
+    /* transition-timing-function: in; */
+    /* transition-timing-function: ease-out; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-timing-function: ease-in; */
+}

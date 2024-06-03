@@ -1,0 +1,679 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Plain", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+/* Header */
+.headSection {
+  background-color: #171819;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+/* logo */
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  color: #f13a11;
+  transform: 0.5s;
+}
+
+/* Nevbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .navbar_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar nav a {
+  color: #fff;
+  font-size: 15px;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.navbar nav a:hover {
+  color: #f13a11;
+  transition: 0.5s;
+}
+
+/* Icon */
+.h_icon {
+  color: #fff;
+  font-size: 18px;
+  padding: 0 11px;
+  transition: 0.5;
+}
+
+.facbook:hover {
+  color: #1877f2;
+  transition: 0.5s;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+  transition: 0.5s;
+}
+
+.insta:hover {
+  color: plum;
+  transition: 0.5s;
+}
+
+/* Baneer */
+.banner {
+  background-image: url(image/first_picture.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 250px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.banner h1,
+.banner h6,
+.banner a {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h6 {
+  color: #909090;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  letter-spacing: -3px;
+  margin: 30px 0px 50px 0px;
+  font-weight: bold;
+}
+
+.banner::before {
+  content: "";
+  background-color: #171819;
+  opacity: 0.85;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.button1 {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 24px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}
+
+.button1:hover {
+  color: #f13a11;
+  transition: 0.5s;
+}
+
+.button2 {
+  color: #f13a11;
+  text-decoration: none;
+  padding: 14px 24px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: 1px solid #f13a11;
+  transition: 0.5s;
+}
+
+.button2:hover {
+  color: #f13a11;
+  background: #fff;
+  transition: 0.5s;
+  border: 1px solid #fff;
+}
+
+/* Schedule */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1025px;
+  }
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.schedule {
+  background-color: #171819;
+}
+
+.section {
+  padding: 112px 0;
+}
+
+section {
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.col-12,
+.col-lg-12,
+.col-md-12 {
+  position: relative;
+  width: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h6 {
+  color: #909090;
+  font-size: 22px;
+  line-height: inherit;
+  margin: 0;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin-bottom: 0.5rem;
+  line-height: normal;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+}
+
+.py-5 {
+  padding-bottom: 3rem !important;
+}
+
+.schedule-table {
+  display: block;
+  text-align: center;
+  border: 0;
+  border-bottom: 0;
+  /* text-transform: uppercase; */
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+.table,
+.thead-light th {
+  background: #f13a11;
+  color: #fff;
+  border: 1px solid black;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table th {
+  padding: 1rem;
+}
+
+th {
+  text-align: inherit;
+  display: table-cell;
+  font-weight: bold;
+  background-color: #000;
+}
+
+.schedule-table span {
+  color: gray;
+  font-size: 14px;
+  display: block;
+}
+
+.table td {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #212122;
+}
+
+td {
+  display: table-cell;
+  unicode-bidi: isolate;
+  background-color: #171819;
+}
+
+.schedule-table tr td:first-child {
+  background: #f13a11;
+  border: 1px solid #212122;
+  color: #fff;
+}
+
+/* About  */
+.heroSection {
+  background-color: #171819;
+  padding: 80px 0px;
+}
+
+.heroFlex {
+  display: flex;
+  width: 60%;
+  margin: auto;
+}
+
+.heroSection .div1 {
+  width: 45%;
+  margin-right: 50px;
+}
+
+.heroSection .div2 {
+  padding-left: 56px;
+}
+
+.heroSection .innerdiv {
+  border-left: 2px solid #ffffff0d;
+  padding-left: 56px;
+}
+
+.heroSection h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+}
+
+.heroSection h6 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  line-height: 1.5em;
+}
+
+.heroSection .aboutParagraph {
+  margin-bottom: 40px;
+}
+
+.heroSection .aboutParagraph .paraSpan {
+  color: #404040;
+  transition: 0.5s;
+}
+
+.paragraph {
+  color: #666262;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.heroSection .aboutParagraph .paraSpan:hover {
+  color: #f13a11;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.heroSection .buttonAbout {
+  background-color: #f13a11;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  padding: 14px 102px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+.heroSection .buttonAbout:hover {
+  color: #f13a11;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.heroSection .strongTag {
+  color: #fff;
+}
+
+.div_p_1,
+.div_p_3,
+.div_p_5 {
+  margin-bottom: 16px;
+}
+
+.div_p_2,
+.div_p_4 {
+  margin-bottom: 5px;
+}
+
+/* About CSS Start */
+.a_section {
+  background-color: #f9f9f9;
+  padding: 112px 0px;
+}
+
+.a_section .a_title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+}
+
+.a_section .paragraph,
+a {
+  color: #404040;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.a_section .a_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.a_section .a_img img {
+  max-width: 100%;
+}
+
+.a_section .a_div1 {
+  margin: 0px 24px;
+  padding: 0px 15px;
+  align-self: center;
+}
+
+.a_section .a_div1 .paragraph {
+  margin-bottom: 16px;
+}
+
+.a_section .a_div2 {
+  margin: 0px 0px 0px 24px;
+  padding: 0px 15px;
+  align-self: center;
+}
+
+.a_section .a_div3 {
+  margin: 0px 24px 0px 0px;
+  padding: 0px 15px;
+  align-self: center;
+}
+
+.a_section .a_info {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 6px 0 38px rgba(20, 20, 20, 0.1);
+}
+
+.a_section .a_info .position {
+  color: #212529;
+  opacity: 0.85;
+  font-size: 16px;
+}
+
+.a_section .a_info h3 {
+  margin-bottom: 3px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.a_section .a_info .a_icon li a i {
+  margin: 6px 10px;
+  color: #666262;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.a_section .a_info .a_icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.fa-facebook-f:hover {
+  color: #1877f2 !important;
+  transition: 0.5s;
+}
+
+.fa-instagram:hover {
+  color: rgb(247, 71, 247) !important;
+  transition: 0.5s;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2 !important;
+  transition: 0.5s;
+}
+
+/* Classes */
+.classes {
+  padding: 112px 0px;
+}
+
+.classes .title {
+  color: #171819;
+  text-align: center;
+  margin: 10px 0px 50px 0px;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: -2px;
+}
+
+.classes .stitle {
+  color: #909090;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.classes .classes_pricing {
+  display: flex;
+  justify-content: space-between;
+}
+
+.classes .classes_info img {
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.classes .classes_info {
+  margin: 0px 15px;
+}
+
+.classes .classes_info .c_p_inner_info {
+  position: relative;
+  padding: 16px 32px;
+  background: #fff;
+  box-shadow: 6px 0 38px rgba(20, 20, 20, 0.1);
+  border-radius: 0 0 2px 2px;
+}
+
+.classes .classes_info .c_p_inner_info h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.classes .classes_info .c_p_inner_info p {
+  margin: 16px 0px;
+  color: #666262;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.classes .classes_info .c_p_inner_info strong {
+  color: #909090;
+}
+
+.classes .classes_info .c_p_inner_info .price {
+  position: absolute;
+  right: 32px;
+  top: 30px;
+  display: block;
+  background: #f13a11;
+  color: #fff;
+  height: 56px;
+  width: 56px;
+  font-weight: bold;
+  border-radius: 50%;
+  line-height: 56px;
+  text-align: center;
+}
+
+/* Conatct */
+.contact_section {
+  padding: 112px 0px;
+}
+
+.contact_section .c_title,
+.m_section .m_title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+}
+
+.contact_section .form .form_btn:hover {
+  background-color: #f13a11;
+  color: white;
+  border: 1px solid #f13a11;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.contact_section .form input {
+  height: calc(2.25rem + 20px);
+}
+
+.contact_section .form input,
+.contact_section .form textarea {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  margin: 20px 0px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #fff;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+}
+
+.contact_section .form .form_btn {
+  background-color: #171819;
+  color: white;
+  border: 1px solid #171819;
+  transition: 0.5s;
+}
+
+/* Map */
+.m_section {
+  border-bottom: 1px solid #efebeb;
+  padding-bottom: 80px;
+}
+
+.m_section .paragraph i {
+  color: #f13a11;
+}
+
+.m_section .paragraph {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Footer */
+.main_footer {
+  padding: 50px 0px;
+}
+
+.inner_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.f_contact .paragraph i {
+  margin-right: 5px;
+  color: #f13a11;
+}
+
+.f_contact p.paragraph {
+  margin-right: 35px;
+}
+
+.f_contact {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,122 @@
+.boxSolid {
+  border: 5px solid yellow;
+  height: 100px;
+  width: 100px;
+  background-color: palevioletred;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+
+}
+
+.boxDotted {
+  border: 5px dotted orange;
+  height: 100px;
+  width: 100px;
+  background-color: greenyellow;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxDashed {
+  border: 5px dashed pink;
+  height: 100px;
+  width: 100px;
+  background-color: chocolate;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxDouble {
+  border: 5px double skyblue;
+  height: 100px;
+  width: 100px;
+  background-color: darkgreen;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxGroove {
+  border: 5px groove green;
+  height: 100px;
+  width: 100px;
+  background-color: darksalmon;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxRidge {
+  border: 5px ridge red;
+  height: 100px;
+  width: 100px;
+  background-color: dodgerblue;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxInsert {
+  border: 5px inset violet;
+  height: 100px;
+  width: 100px;
+  background-color: goldenrod;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxOutset {
+  border: 5px outset rgb(225, 57, 228);
+  height: 100px;
+  width: 100px;
+  background-color: cornflowerblue;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxNone {
+  border: 5px none blue;
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+.boxHidden {
+  border: 5px hidden black;
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text vertically */
+}
+
+body{
+  background-image: url('../../asset/pexels.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body:hover{
+  background-image: url('../../asset/sunset.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

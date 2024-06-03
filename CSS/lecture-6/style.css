@@ -1,0 +1,74 @@
+/* display props
+block
+inline
+inline-block
+flex
+grid
+flex-grow
+flex-basis
+flex-sherif
+*/
+/* 
+.parent{
+    display: flex;
+    display: grid;
+    
+    .box{
+        height: 100px;
+        width: 100px;
+        border: 2px solid orchid;
+        background-color: aquamarine;
+        display: inline;
+        display: inline-block;
+        display: flex;
+        display: none;
+        visibility: hidden;
+    }
+} */
+
+.parent{
+    display: flex;
+    width: 1300px;
+    height: 500px;
+    border: 2px outset blue;
+    .box1{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box2{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box3{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box4{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box5{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box6{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box7{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+    .box8{
+        border: 1px solid orange;
+        background-color: aquamarine;
+        flex-basis: 150px;
+    }
+}

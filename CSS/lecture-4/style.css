@@ -1,0 +1,53 @@
+/* color */
+.color{
+    color: darkorange;                  /* Using color name*/
+    color:rgb(225, 37, 228);            /* Using rgb color*/
+    color: #66FF00;                     /* Using Hexadecimal color*/
+}
+
+/* Backgrond color */
+.bgColor{
+    background-color: #00B9E8;
+}
+
+/* Border */
+.Border{
+    background-color: rgb(37, 228, 145);
+    height: 100px;
+    width: 100px;
+}
+.Border{
+    background-color: #fff200;
+    border-width: 10px;
+    border-style: double;
+    border-color: rgb(22, 237, 245);
+}
+
+/* Multiple border apply */
+.multi_border{
+    border-top: 2px solid red;
+    border-right: 5px dashed blue;
+    border-bottom: 7px dotted green;
+    border-left: 10px double yellow;
+    background-color: rgb(255, 189, 127);
+    height: 100px;
+    width: 100px;
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
+}
+
+/* Border Radius apply */
+.radius{
+    color: wheat;
+    background-color: cornflowerblue;
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(255, 47, 234);
+    border-radius: 20px;
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation From</title>
+    <style>
+body {
+background-color: white;
+margin: 0 auto;
+width: 600px;
+border: 3px solid blue;
+padding: 10px 20px;
+box-shadow: 10px 10px 5pxA;
+}
+fieldset {
+margin-top: 1em;
+margin-bottom: 1em;
+padding: .5em;
+}
+legend {
+color: blue;
+font-weight: bold;
+font-size: 85%;
+margin-bottom: .5em;
+}
+    </style>
+</head>
+<body>
+    <h2>Reservation Request</h2>
+    <fieldset>
+        <legend>General Infromation</legend><br>
+    <pre><label>Arrival date:</label>    <input type="date">   <text style="color: red; font-size: 15px;">Arrival Date Is Invalid</text><br></pre>
+    <pre><label>Nights:</label>          <input type="text" style="width: 110px;">   <text style="color: red; font-size: 15px;">Nights must be a number</text><br></pre>
+    <pre><label>Adults:</label>          <input type="number" style="width: 40px;"><br></pre>
+    <pre><label>Children:</label>        <input type="number" style="width: 40px;"><br></pre>    
+    </fieldset>    
+    <fieldset>
+        <legend>Proferences</legend><br>
+        <pre><label>Room Type:</label>  <input type="radio"><label>Standard</label>  <input type="radio"><label>Business</label>  <input type="radio"><label>Suite</label></pre><br>
+        <pre><label>Bed Type:</label>   <input type="radio"><label>King</label>  <input type="radio"><label>Double Double</label></pre>
+        <input type="checkbox">
+        <label>Smoking</label>
+    </fieldset>    
+    <fieldset>
+        <legend>Contact Information</legend><br>
+        <pre><label>Name:</label>     <input type="text">        <text style="color: red; font-size: 15px;">Name is required</text></pre>
+        <pre><label>Email: </label>   <input type="email">        <text style="color: red; font-size: 15px;">Email address is invalid</text></pre>
+        <pre><label>Phone:</label>    <input type="tel">        <text style="color: red; font-size: 15px;">Phone number is invalid</text></pre>
+    </fieldset>  
+    <pre><button>Submit Reservation</button>      <button style="width: 150px;">Clear</button></pre>  
+</body>
+</html>

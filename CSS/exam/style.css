@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins', sans-serif;
+}
+
+.navigationbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orangered;
+    color: #fff;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.navigationbar:hover{
+    color: blue;
+    transition: 0.5s;
+}
+
+.navbar .navbar_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar nav a{
+    color: #fff;
+    font-size: 15px;
+    padding: 0 20px;
+    text-decoration: none;
+    transition: 0.5s;
+    margin-right: 35px;
+}
+.navbar nav a:hover{
+    color: blue;
+    transition: 0.5s;
+}
+.conatain{
+    background-image: url(../webpage/gym/image/first_picture.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 250px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.conatain h1, .conatain h6, .conatain a{
+    position: relative;
+    z-index: 2;
+}
+
+.conatain h6{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.conatain h1{
+    font-size: 48px;
+    letter-spacing: -3px;
+    margin: 30px 0px 50px 0px;
+    font-weight: bold;
+}
+
+.conatain::before{
+    content: "";    
+    background-color: #171819;
+    opacity: 0.85;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.btn{
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: 1px solid orangered;
+    transition: 0.5s;
+    margin-top: 20px;
+    background-color: orangered;
+}
+
+.btn:hover{
+    color: blue;
+    transition: 0.5s;
+}
