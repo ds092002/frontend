@@ -1,0 +1,44 @@
+.headSection {
+    background-color: skyblue;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+  
+    .logo {
+      img {
+        width: 50px;
+        aspect-ratio: 1;
+      }
+  
+      &:hover {
+        color: #f13a11;
+        transform: 0.5s;
+      }
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+  
+      .navbar_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        nav a {
+          color: #fff;
+          font-size: 15px;
+          padding: 0 20px;
+          text-decoration: none;
+          transition: 0.5s;
+  
+          &:hover {
+            color: green;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  

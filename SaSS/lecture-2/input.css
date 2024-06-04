@@ -1,0 +1,35 @@
+.headSection {
+  background-color: skyblue;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+.headSection .logo img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.headSection .logo:hover {
+  color: #f13a11;
+  transform: 0.5s;
+}
+.headSection .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.headSection .navbar .navbar_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headSection .navbar .navbar_div nav a {
+  color: #fff;
+  font-size: 15px;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.headSection .navbar .navbar_div nav a:hover {
+  color: green;
+  transition: 0.5s;
+}/*# sourceMappingURL=input.css.map */
