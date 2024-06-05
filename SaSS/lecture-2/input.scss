@@ -1,38 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .headSection {
-    background-color: skyblue;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    z-index: 9;
-  
-    .logo {
-      img {
-        width: 50px;
-        aspect-ratio: 1;
-      }
-  
-      &:hover {
-        color: #f13a11;
-        transform: 0.5s;
-      }
+  background-color: skyblue;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+
+  .logo {
+    img {
+      width: 50px;
+      aspect-ratio: 1;
     }
-  
-    .navbar {
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar_div {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-  
-      .navbar_div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-  
-        nav a {
+
+      nav {
+        a {
           color: #fff;
           font-size: 15px;
           padding: 0 20px;
           text-decoration: none;
           transition: 0.5s;
-  
+
           &:hover {
             color: green;
             transition: 0.5s;
@@ -41,4 +42,38 @@
       }
     }
   }
+}
+
+body{
+  background-color: red;
+}
+
+.round{
+  position: relative;
+  // margin-top: 200px;
+  top: 200px;
+  left: 45%;
   
+}
+
+.bell{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 2px solid goldenrod;
+  background-color: goldenrod;
+  border-radius: 50%;
+  // z-index: 3;
+}
+
+.hr1{
+  position: absolute;
+  top: 90px;
+  width: 200px;
+}
+.hr2{
+  position: absolute;
+  top: 80px;
+  width: 198px;
+  left: 1.5px;
+}
