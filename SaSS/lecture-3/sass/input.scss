@@ -1,10 +1,9 @@
+@import "variable";
+
 *{
     margin: 0;
     padding: 0;
 }
-
-$color:blue;
-$bgc: yellow;
 
 @mixin header($bgc, $color){
     background-color: $bgc;
@@ -20,6 +19,16 @@ $bgc: yellow;
     @include header(yellow,blue);
 }
 
+.header1:hover{
+    background-color: $color;
+    color: $bgc;
+}
+
 .header2{
     @include header(blue, yellow);
+}
+
+.header2:hover{
+    background-color: $bgc;
+    color: $color;
 }

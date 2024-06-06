@@ -10,6 +10,7 @@
   padding: 15px;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .logo {
@@ -46,4 +47,59 @@
 .navbar nav a:hover {
   color: darkblue;
   transition: 0.5s;
-}/*# sourceMappingURL=input.css.map */
+}
+
+.bgimage {
+  background-image: url(./../../asset/landscape.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 350px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.bgimage h1 p a {
+  position: relative;
+  z-index: 2;
+}
+
+.bgimage h1 {
+  font-size: 50px;
+  letter-spacing: -2px;
+  margin: 0 30px 0 50px;
+  font-weight: bolder;
+}
+
+.bgimage p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+span {
+  color: rgb(76, 0, 255);
+  padding-right: 65px;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 24px;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  border: 1px solid red;
+  transition: 0.5s;
+  margin-top: 50px;
+  background-color: red;
+}
+
+.btn:hover {
+  color: blue;
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=input.css.map */
