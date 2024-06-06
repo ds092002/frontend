@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$color:blue;
+$bgc: yellow;
+
+@mixin header($bgc, $color){
+    background-color: $bgc;
+    color: $color;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header1{
+    @include header(yellow,blue);
+}
+
+.header2{
+    @include header(blue, yellow);
+}
