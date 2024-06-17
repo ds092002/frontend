@@ -867,69 +867,12 @@ video {
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[ur\] {
-  background-color: ur;
-}
-
-.bg-\[url\] {
-  background-color: url;
-}
-
-.bg-pink-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\)\] {
-  background-image: url();
-}
-
-.bg-\[url\(\.\.\/asse\)\] {
-  background-image: url(../asse);
-}
-
-.bg-\[url\(\.\.\)\] {
-  background-image: url(..);
-}
-
-.bg-\[url\(\.\.\/\.\.\/\)\] {
-  background-image: url(../../);
-}
-
-.bg-\[url\(\.\.\/\.\.\/Dem\)\] {
-  background-image: url(../../Dem);
-}
-
-.bg-\[url\(\.\.\/\.\.\/Demo\/asset\/\)\] {
-  background-image: url(../../Demo/asset/);
-}
-
-.bg-\[url\(\.\.\/\.\.\/Demo\/asset\/demo5\(1\)\.jpg\)\] {
-  background-image: url(../../Demo/asset/demo5(1).jpg);
-}
-
-.bg-\[url\(\.\.\/asset\/demo5\(1\)\.jpg\)\] {
-  background-image: url(../asset/demo5(1).jpg);
-}
-
-.bg-\[url\(\.\.\/asset\/demo5\(1\)\.jpeg\)\] {
-  background-image: url(../asset/demo5(1).jpeg);
-}
-
 .bg-\[url\(\'\.\.\/asset\/demo5\(1\)\.jpeg\'\)\] {
   background-image: url('../asset/demo5(1).jpeg');
 }
 
 .bg-cover {
   background-size: cover;
-}
-
-.bg-fixed {
-  background-attachment: fixed;
 }
 
 .bg-scroll {
