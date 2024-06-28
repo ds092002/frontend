@@ -2,98 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./output.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .circle {
+            background: conic-gradient(from 0deg,
+                    #ffb400 0%,
+                    #ffb400 0% var(--i),
+                    #333 var(--i),
+                    #333 100%);
+        }
+    </style>
 </head>
 
 <body>
     <div class="text-white bg-[rgb(17,17,17)] box-border">
-        <div class="h-svh m-auto">
-
+        <div class="m-auto">
             <div class="fixed top-[210px] bg-white py-3 px-4 rounded-r-md">
                 <i class="fa-solid fa-gear text-[rgb(17,17,17)] text-xl animate-spin"></i>
             </div>
 
             <div class="uppercase">
                 <h1
-                    class=" w-full text-3xl sm:text-6xl sm:text relative font-extrabold p-4 bg-[#252525] bg-transparent text-center py-20 z-20 overflow-hidden">
+                    class="w-full text-3xl sm:text-6xl sm:text relative font-extrabold p-4 bg-[#252525] bg-transparent text-center py-20 z-20 overflow-hidden">
                     About <span class="text-[#FFB400] z-20">me</span>
                     <p
                         class="flex absolute top-0 h-full w-full group-hover:scale-125 duration-300 text-9xl items-center justify-center -z-10 opacity-10">
-                        resume</p>
+                        resume
+                    </p>
                 </h1>
             </div>
 
-            <div class="grid px-8 gap-5 ml-72 mt-2">
+            <div class="grid ml-72 mt-2">
                 <div class="">
-                    <h1 class="uppercase font-extrabold text-2xl py-7">personal infos</h1>
+                    <h1 class="uppercase font-extrabold text-2xl py-7">
+                        personal infos
+                    </h1>
 
                     <div class="grid grid-cols-3">
                         <div class="">
-                            <p class="text-gray-400 font-semibold mb-4">First Name : <span
-                                    class="text-white">Dhaval</span></p>
-                            <p class="text-gray-400 font-semibold mb-4">Last Name : <span
-                                    class="text-white">Solanki</span></p>
-                            <p class="text-gray-400 font-semibold mb-4">Age : <span class="text-white">22 Years</span>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                First Name : <span class="text-white">Dhaval</span>
                             </p>
-                            <p class="text-gray-400 font-semibold mb-4">Nationality : <span
-                                    class="text-white">Indian</span></p>
-                            <p class="text-gray-400 font-semibold">Freelance : <span class="text-white">Available</span>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Last Name : <span class="text-white">Solanki</span>
                             </p>
-                            <div class="cursor-auto mt-8 font-bold ">
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Age : <span class="text-white">22 Years</span>
+                            </p>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Nationality : <span class="text-white">Indian</span>
+                            </p>
+                            <p class="text-gray-400 font-semibold">
+                                Freelance : <span class="text-white">Available</span>
+                            </p>
+                            <div class="cursor-auto mt-8 font-bold">
                                 <button
-                                    class="border-2 border-yellow-500 rounded-full pl-8 font-bold text-sm relative z-50 duration-500 overflow-hidden before:content[''] before:absolute before:bg-yellow-500 before:h-full before:w-0 before:right-0 before:rounded-full before:z-[-1] before:duration-500 hover:before:w-full hover:before:duration-500">DOWNLOAD
-                                    CV
+                                    class="border-2 border-yellow-500 rounded-full pl-8 font-bold text-sm relative z-50 duration-500 overflow-hidden before:content[''] before:absolute before:bg-yellow-500 before:h-full before:w-0 before:right-0 before:rounded-full before:z-[-1] before:duration-500 hover:before:w-full hover:before:duration-500">
+                                    DOWNLOAD CV
                                     <i
                                         class="fa-solid fa-download bg-yellow-500 rounded-full p-4 ml-4 text-xl font-extrabold relative z-50"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="">
-                            <p class="text-gray-400 font-semibold mb-4">Address : <span class="text-white">Surat</span>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Address : <span class="text-white">Surat</span>
                             </p>
-                            <p class="text-gray-400 font-semibold mb-4">Phone : <span class="text-white">+91
-                                    9054972757</span></p>
-                            <p class="text-gray-400 font-semibold mb-4">Email : <span
-                                    class="text-white">dhavalas24@gmail.com</span></p>
-                            <p class="text-gray-400 font-semibold mb-4">Github : <span
-                                    class="text-white">ds092002</span></p>
-                            <p class="text-gray-400 font-semibold">Languages : <span class="text-white">English, Hindi,
-                                    Gujarati</span></p>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Phone : <span class="text-white">+91 9054972757</span>
+                            </p>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Email : <span class="text-white">dhavalas24@gmail.com</span>
+                            </p>
+                            <p class="text-gray-400 font-semibold mb-4">
+                                Github : <span class="text-white">ds092002</span>
+                            </p>
+                            <p class="text-gray-400 font-semibold">
+                                Languages :
+                                <span class="text-white">English, Hindi, Gujarati</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="py-8 text-white gap-6 flex flex-col sm:flex-row h-32 w-32 box-border ml-[1150px] mt-[-370px]">
-                <div class="flex-1 ">
+                <div class="flex-1">
                     <div class="border border-[#202020] p-8 rounded-lg mb-8">
                         <p
                             class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            12</p>
+                            12
+                        </p>
                         <div class="flex box-border w-52">
                             <div
                                 class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#fff] shrink-0 hidden md:block">
                             </div>
-                            <p class="text-base font-medium">YEARS OF <span
-                                    class="block md:inline-block lg:block ">EXPERIENCE</span></p>
+                            <p class="text-base font-medium">
+                                YEARS OF
+                                <span class="block md:inline-block lg:block">EXPERIENCE</span>
+                            </p>
                         </div>
                     </div>
                     <div class="border border-[#202020] p-8 rounded-lg">
                         <p
                             class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            81</p>
-                        <div class="flex ">
+                            81
+                        </p>
+                        <div class="flex">
                             <div
                                 class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#fff] shrink-0 hidden md:block">
                             </div>
-                            <p class="text-base font-medium">HAPPY <span
-                                    class="block md:inline-block lg:block">CUSTOMERS</span></p>
+                            <p class="text-base font-medium">
+                                HAPPY
+                                <span class="block md:inline-block lg:block">CUSTOMERS</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -101,20 +129,24 @@
                     <div class="border border-[#202020] p-8 rounded-lg mb-8">
                         <p
                             class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3 box-border w-52">
-                            97</p>
-                        <div class="flex ">
+                            97
+                        </p>
+                        <div class="flex">
                             <div
                                 class="w-7 h-[1px] rounded-full relative top-[14px] mr-3 bg-white shrink-0 hidden md:block">
                             </div>
-                            <p class="text-base font-medium">COMPLETED <span
-                                    class="block md:inline-block lg:block">PROJECTS</span></p>
+                            <p class="text-base font-medium">
+                                COMPLETED
+                                <span class="block md:inline-block lg:block">PROJECTS</span>
+                            </p>
                         </div>
                     </div>
                     <div class="border border-[#202020] p-8 rounded-lg">
                         <p
                             class="font-bold text-5xl text-[#FFB400] after:content-['+'] after:text-4xl after:relative after:-top-3 after:font-normal mb-3">
-                            97</p>
-                        <div class="flex ">
+                            97
+                        </p>
+                        <div class="flex">
                             <div
                                 class="w-7 h-[2px] rounded-full relative top-[14px] mr-3 bg-[#fff] shrink-0 hidden md:block">
                             </div>
@@ -123,11 +155,69 @@
                     </div>
                 </div>
             </div>
+
+            <hr class="mt-96 border-t border-solid border-t-[#202020] mx-auto mb-55 max-w-[40%]" />
+
+            <div>
+                <div class="uppercase flex justify-center mt-8">
+                    <h1 class="font-bold text-2xl">my skills</h1>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-4 h-[500px] max-w-[1000px] m-auto pb-8  text-center">
+
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:80%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">80%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">NODE</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:85%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">85%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">JAVASCRIPT</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:70%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">70%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">HTML</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:65%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">65%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">CSS</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:65%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">65%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">Tailwind</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:70%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">70%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">SASS</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:85%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">85%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">MONGODB</p>
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="circle relative aspect-square rounded-full before:content-[''] before:bg-[#111111] before:inset-[7px] before:absolute before:rounded-full h-28 w-28" style="--i:80%">
+                        <p class="absolute h-full w-full flex justify-center items-center text-2xl font-bold">8%</p>
+                        <p class="my-4 text-xl font-semibold absolute -bottom-16 w-full mx-auto">MY SQL</p>
+                    </div>
+                </div>
+            </div>
             
-         <hr class="mt-96 border-t border-solid border-t-[#202020] mx-auto mb-55 max-w-[40%] ">
         </div>
     </div>
-
 </body>
 
 </html>
