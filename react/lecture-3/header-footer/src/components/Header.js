@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   return (
@@ -11,6 +13,8 @@ const Header = () => {
                     <li className='text-xl font-semibold hover:scale-105 hover:text-[#FFB400] duration-300 transition'><a href='#'>About</a></li>
                     <li className='text-xl font-semibold hover:scale-105 hover:text-[#FFB400] duration-300 transition'><a href='#'>Service</a></li>
                     <li className='text-xl font-semibold hover:scale-105 hover:text-[#FFB400] duration-300 transition'><a href='#'>Contact</a></li>
+                    <li className='text-xl font-semibold hover:scale-105 hover:text-[#FFB400] duration-300 transition'><a href='#'><FontAwesomeIcon icon={faMagnifyingGlass} /></a></li>
+                    
                 </ul>
             </nav>
         </header>
