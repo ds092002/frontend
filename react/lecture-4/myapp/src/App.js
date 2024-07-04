@@ -29,6 +29,7 @@ function App() {
       })}
       <hr/>
       <h1>How To Rendaring Image In React Js</h1>
+      <img src="" alt="" />
       <hr/>
       <Marquee delay={2} speed={250}><img src={pikachu} alt="image"/></Marquee>
     </div>

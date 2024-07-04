@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    color:yellow;
+}
+}
+
+header{
+    background-color:green;
+}
+
+header h1{
+    text-align: center;
+    color: blue;
+    padding: 20px;
+    border-bottom: 3px solid black;
+}
+
+/* crud operation */
+
+.crud-form{
+    display: flex;
+    justify-content: space-around;
+}
+
+label{
+    display: block;
+    color: violet;
+}
+
+.addform{
+    padding: 20px;
+    max-width: 400px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px;
+}
+
+.addinputs{
+    margin: 9px 0px;
+    width: 100%;
+}
+
+.inputs{
+    padding: 10px;
+    width: 100%;
+}
