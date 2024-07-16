@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import pavbhaji from '../assets/download.jpg'
 
 export function Pavbhaji() {
   return (
@@ -81,7 +82,7 @@ const Recips = () => {
 
     return(
       <div>
-          <button onClick={buttonClick}>Show Recips / Hide Recips</button>
+          <button onClick={buttonClick}><img src={pavbhaji} alt="" /> Show Recips / Hide Recips</button>
           {showRecips && <Pavbhaji/>}
       </div>
     )
