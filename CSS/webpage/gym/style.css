@@ -26,6 +26,8 @@
   font-weight: bold;
   text-decoration: none;
   transition: 0.5s;
+  padding-right: 15px;
+  display: flex;
 }
 
 .logo:hover {
