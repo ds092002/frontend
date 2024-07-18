@@ -1,9 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 
 const FiteringData = () => {
 
     const [productData, setProductData] = useState([]);
+    const [selectCategory, setSelectCategory] = useState('all');
+    const [selectPrice, setSelectprice] = useState([0, 1000]);
 
     console.log('product data', productData);
 
@@ -252,56 +255,121 @@ const FiteringData = () => {
 
     useEffect(() => {
         setProductData(Product)
-      } , [])
+    }, [])
 
-    // const productFilter = Product.filter((items) => items.category === "women's clothing");
+    const handleCategoryChange = (category) => {
+        setSelectCategory(category);
+    }
+    const handlePriceChange = (price) => {
+        const value = Number(price.target.value);
+        if (price.target.name === 'minPrice') {
+            setSelectprice([value, selectPrice[1]]);
+        }
+        else {
+            setSelectprice([selectPrice[0], value]);
+        }
+    }
 
-    console.log(productFilter);
+
+    const filterProducts = productData.filter(product =>
+        (selectCategory === "all" || product.category === selectCategory) &&
+        product.price >= selectPrice[0] &&
+        product.price <= selectPrice[1]
+    );
+
+    // console.log(selectPrice[0])
+    // console.log(selectPrice[1])
+
     return (
-        <div>
+        <div className=''>
             <h1 className='text-center bg-purple-600 p-2'>This is List-Rendering in React</h1>
 
-            {/* <button onClick={data}>Click For Data</button> */}
-            <div className='flex flex-wrap justify-between'>
+            <div>
+                <div className='flex justify-center space-x-4 mb-4'>
+                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange('all')}>All</button>
+                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("men's clothing")}>Men's Clothings</button>
+                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("women's clothing")}>Women's Clothings</button>
+                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("jewelery")}>Jewelery</button>
+                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("electronics")}>Electronics</button>
+                </div>
+                <div className="flex justify-center space-x-4 mb-4">
+                    <label className='flex items-center'>
+                        Min Price:
+                        <input className='ml-2 px-2 py-1 border rounded'
+                            type="number"
+                            name="minPrice"
+                            value={selectPrice[0]}
+                            onChange={handlePriceChange}
+                            min=""
+                        />
+                    </label>
+                    <label>
+                        Max Price:
+                        <input className='ml-2 px-2 py-1 border rounded'
+                            type="number"
+                            name="maxPrice"
+                            value={selectPrice[1]}
+                            onChange={handlePriceChange}
+                            min=""
+                        />
+                    </label>
+                </div>
 
-                {
-                    productData.map((product) => {
-                        return (
-                            <div className="w-[300px] rounded-md border" key={product.id}>
-                                <img
-                                    src={product.image}
-                                    alt="Laptop"
-                                    className="h-[200px] w-full rounded-t-md object-cover"
-                                />
-                                <div className="p-4">
-                                    <h1 className="inline-flex items-center text-lg font-semibold">
-                                        {product.title} &nbsp; <ArrowUpRight className="h-4 w-4" />
-                                    </h1>
-                                    <p className="mt-3 text-sm text-gray-600">
-                                        Rs.{product.price}
-                                    </p>
-                                    <div className="mt-4">
-                                        <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                                            #Macbook
-                                        </span>
-                                        <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                                            #Apple
-                                        </span>
-                                        <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-                                            #Laptop
-                                        </span>
+                <div className='grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4 md:justify-center'>
+                    {
+                        filterProducts.map((product) => {
+                            return (
+                                <div class="flex font-sans border rounded-2xl w-[550px]">
+                                    <div class="flex-none w-48 relative">
+                                        <img src={product.image} alt="" class="absolute inset-0 w-50% h-full object-contain" loading="lazy" />
                                     </div>
-                                    <button
-                                        type="button"
-                                        className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                                    >
-                                        Read
-                                    </button>
+                                    <form class="flex-auto p-6">
+                                        <div class="flex flex-wrap">
+                                            <h1 class="flex-auto text-lg font-semibold text-slate-900">
+                                                {product.title}
+                                            </h1>
+                                            <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+                                                In stock
+                                            </div>
+                                        </div>
+                                            <div class="text-lg font-semibold text-slate-500 flex-wrap">
+                                                RS.{product.price}
+                                            </div>
+                                        <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+                                            <div class="space-x-2 flex text-sm">
+                                                <label>
+                                                    <input class="sr-only peer" name="size" type="radio" value="xs" checked />
+                                                    <div class="w-19 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                                        {product.category}
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="flex space-x-4 mb-6 text-sm font-medium">
+                                            <div class="flex-auto flex space-x-4">
+                                                <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+                                                    Buy now
+                                                </button>
+                                                <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
+                                                    Add to bag
+                                                </button>
+                                            </div>
+                                            <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                                                <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="text-sm text-slate-700">
+                                            Free shipping on all continental US orders.
+                                        </p>
+                                    </form>
                                 </div>
-                            </div>
-                        )
-                    })
-                }
+
+                            )
+                        })
+                    }
+                </div>
             </div>
 
         </div>
