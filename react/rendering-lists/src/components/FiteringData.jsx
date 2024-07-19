@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+// import { ArrowUpRight } from 'lucide-react'
 
 const FiteringData = () => {
 
@@ -282,45 +282,48 @@ const FiteringData = () => {
 
     return (
         <div className=''>
-            <h1 className='text-center bg-purple-600 p-2'>This is List-Rendering in React</h1>
-
-            <div>
-                <div className='flex justify-center space-x-4 mb-4'>
-                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange('all')}>All</button>
-                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("men's clothing")}>Men's Clothings</button>
-                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("women's clothing")}>Women's Clothings</button>
-                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("jewelery")}>Jewelery</button>
-                    <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("electronics")}>Electronics</button>
+            {/* <h1 className='text-center bg-purple-600 p-2'>This is List-Rendering in React</h1> */}
+            <div className=''>
+                <div className=''>
+                    <nav className='bg-purple-600 py-3 w-full z-20 mb-10 fixed top-0'>
+                        <div className='flex justify-center space-x-4 mb-4'>
+                            <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange('all')}>All</button>
+                            <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("men's clothing")}>Men's Clothings</button>
+                            <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("women's clothing")}>Women's Clothings</button>
+                            <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("jewelery")}>Jewelery</button>
+                            <button className='bg-blue-400 px-4 py-2 text-white rounded' onClick={() => handleCategoryChange("electronics")}>Electronics</button>
+                        </div>
+                        <div className="flex justify-center space-x-4 mb-4">
+                            <label className='flex items-center'>
+                                Min Price:
+                                <input className='ml-2 px-2 py-1 border rounded'
+                                    type="number"
+                                    name="minPrice"
+                                    value={selectPrice[0]}
+                                    onChange={handlePriceChange}
+                                    min=""
+                                />
+                            </label>
+                            <label>
+                                Max Price:
+                                <input className='ml-2 px-2 py-1 border rounded'
+                                    type="number"
+                                    name="maxPrice"
+                                    value={selectPrice[1]}
+                                    onChange={handlePriceChange}
+                                    min=""
+                                />
+                            </label>
+                        </div>
+                    </nav>
                 </div>
-                <div className="flex justify-center space-x-4 mb-4">
-                    <label className='flex items-center'>
-                        Min Price:
-                        <input className='ml-2 px-2 py-1 border rounded'
-                            type="number"
-                            name="minPrice"
-                            value={selectPrice[0]}
-                            onChange={handlePriceChange}
-                            min=""
-                        />
-                    </label>
-                    <label>
-                        Max Price:
-                        <input className='ml-2 px-2 py-1 border rounded'
-                            type="number"
-                            name="maxPrice"
-                            value={selectPrice[1]}
-                            onChange={handlePriceChange}
-                            min=""
-                        />
-                    </label>
-                </div>
 
-                <div className='grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4 md:justify-center'>
+                <div className='flex flex-wrap justify-between space-y-4 mx-7 mt-44'>
                     {
                         filterProducts.map((product) => {
                             return (
-                                <div class="flex font-sans border rounded-2xl w-[550px]">
-                                    <div class="flex-none w-48 relative">
+                                <div class="flex font-sans border rounded-2xl w-[550px] overflow-hidden">
+                                    <div class="w-48 md:w-64 relative">
                                         <img src={product.image} alt="" class="absolute inset-0 w-50% h-full object-contain" loading="lazy" />
                                     </div>
                                     <form class="flex-auto p-6">
@@ -332,14 +335,14 @@ const FiteringData = () => {
                                                 In stock
                                             </div>
                                         </div>
-                                            <div class="text-lg font-semibold text-slate-500 flex-wrap">
-                                                RS.{product.price}
-                                            </div>
+                                        <div class="text-lg font-semibold text-slate-500 flex-wrap">
+                                            RS.{product.price}
+                                        </div>
                                         <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
                                             <div class="space-x-2 flex text-sm">
                                                 <label>
                                                     <input class="sr-only peer" name="size" type="radio" value="xs" checked />
-                                                    <div class="w-19 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                                    <div class="w-44 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
                                                         {product.category}
                                                     </div>
                                                 </label>
