@@ -1,10 +1,16 @@
 import React from 'react'
 import { UserContext1, UserContext2 } from './MainCom'
+import { useContext } from 'react'
 
 const ComponentC = () => {
-  return (
+ 
+    let firstName = useContext(UserContext1)
+    let LastName = useContext(UserContext2)
+ 
+    return (
     <div>
-        <UserContext1>
+        <h1 className='heading'>My Name is {firstName} and my Last name is {LastName}</h1>
+        {/* <UserContext1>
         {
             (firstName) => {
                 return (
@@ -24,7 +30,7 @@ const ComponentC = () => {
                 )
             }
         }
-        </UserContext1>
+        </UserContext1> */}
     </div>
   )
 }
