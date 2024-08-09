@@ -1,11 +1,16 @@
-import './App.css'
-import Login from './Components/Login'
+import React from "react"
+import CakeContainer from "./Components/CakeContainer"
+import CocoContainer from "./Components/CocoContainer"
 
 function App() {
   
   return (
     <>
-     <Login/>
+      <div>
+        <h1 className="heading">This is React Redux Functionality</h1>
+        <CakeContainer/>
+        <CocoContainer/>
+      </div>
     </>
   )
 }
