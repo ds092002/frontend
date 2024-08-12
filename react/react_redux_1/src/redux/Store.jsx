@@ -1,4 +1,5 @@
-import {createStore} from "redux";
+import { createStore } from "redux";
+
 import { CakeReducer } from "./cake/CakeReducer";
 import { CocoReducer } from "./cocoThikShake/CocoReducer";
 
