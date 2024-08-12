@@ -1,6 +1,5 @@
 import React from "react"
-import CakeContainer from "./Components/CakeContainer"
-import CocoContainer from "./Components/CocoContainer"
+import ShopContainer from "./Components/ShopContainer"
 
 function App() {
   
@@ -8,8 +7,7 @@ function App() {
     <>
       <div>
         <h1 className="heading">This is React Redux Functionality</h1>
-        <CakeContainer/>
-        <CocoContainer/>
+          <ShopContainer/>
       </div>
     </>
   )
