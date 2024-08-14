@@ -37,7 +37,7 @@ export function Navbar() {
     }
 
     return (
-        <div className="relative w-full bg-white">
+        <div className="fixed w-full bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                 <div className="inline-flex items-center space-x-2">
                     <span>
@@ -77,7 +77,7 @@ export function Navbar() {
                 <div className="hidden lg:inline-block relative ">
                     <button
                         type="button"
-                        className="rounded-m bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        className="rounded-md    bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
                         Cart
                     </button>
@@ -127,11 +127,11 @@ export function Navbar() {
                                                 to={item.to}
                                                 className={({ isActive }) =>
                                                     isActive
-                                                        ? "-m-3 flex items-center rounded-md p-3 text-sm font-semibold text-white"
-                                                        : "-m-3 flex items-center rounded-md p-3 text-sm font-semibold text-[#0068C8] hover:bg-gray-50"
+                                            ? "text-sm font-semibold text-[#0068C8] underline "
+                                            : "text-sm font-semibold text-gray-800 hover:text-[#0068C8]"
                                                 }
                                             >
-                                                <span className="ml-3 text-base font-medium text-gray-900">
+                                                <span className="">
                                                     {item.name}
                                                 </span>
                                             </NavLink>

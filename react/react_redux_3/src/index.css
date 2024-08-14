@@ -5,6 +5,6 @@
 
 @layer components{
     .heading{
-      @apply text-center py-4 bg-yellow-400 text-4xl text-white h-screen flex items-center justify-center font-extrabold italic
+      @apply text-center py-4 bg-gradient-to-b from-orange-500 via-white to-green-600 text-4xl text-blue-800 h-screen flex items-center justify-center font-extrabold italic
     }
   }
