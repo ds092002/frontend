@@ -1,4 +1,4 @@
-import { PRODUCT_ADD, PRODUCT_UPDATE, PRODUCT_DELETE, PRODUCT_ADD_SHOP } from "./Constant";
+import { PRODUCT_ADD, PRODUCT_UPDATE, PRODUCT_DELETE, PRODUCT_ADD_SHOP } from "../Constant";
 
 const ProductReducer = (state , action) => {
     switch(action.type){

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import {useSelector} from 'react-redux'
 
 const menuItems = [
     {
@@ -30,6 +31,9 @@ const menuItems = [
 ]
 
 export function Navbar() {
+
+    const result = useSelector((state) => state.cart)
+
     const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
     const toggleMenu = () => {
@@ -37,7 +41,7 @@ export function Navbar() {
     }
 
     return (
-        <div className="fixed w-full bg-white">
+        <div className="sticky w-full bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                 <div className="inline-flex items-center space-x-2">
                     <span>

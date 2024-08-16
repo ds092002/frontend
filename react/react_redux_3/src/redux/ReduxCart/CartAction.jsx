@@ -1,32 +1,38 @@
 import { ADD_TO_CART, REMOVE_TO_CART, EMPTY_CART,CART_TO_WISHLIST, INCREMENT, DECREMENT} from "../Constant";
 
-export const add_to_cart = () => {
+export const add_to_cart = (data) => {
     return{
-        type:ADD_TO_CART
+        type:ADD_TO_CART,
+        data
     }
 }
-export const remove_to_cart = () => {
+export const remove_to_cart = (data) => {
     return{
-        type:REMOVE_TO_CART
+        type:REMOVE_TO_CART,
+        data
     }
 }
-export const empty_cart = () => {
+export const empty_cart = (data) => {
     return{
-        type:EMPTY_CART
+        type:EMPTY_CART,
+        data
     }
 }
-export const cart_to_whishlist = () => {
+export const cart_to_whishlist = (data) => {
     return{
-        type:CART_TO_WISHLIST
+        type:CART_TO_WISHLIST,
+        data
     }
 }
-export const increment = () => {
+export const increment = (data) => {
     return{
-        type:INCREMENT
+        type:INCREMENT,
+        data
     }
 }
-export const decrement = () => {
+export const decrement = (data) => {
     return{
-        type:DECREMENT
+        type:DECREMENT,
+        data
     }
 }
