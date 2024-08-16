@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .heading{
+      @apply text-center py-4 bg-gradient-to-b from-orange-500 via-white to-green-600 text-4xl text-blue-500 h-screen flex  flex-col items-center justify-center font-extrabold italic
+    }
+    .btn{
+      @apply bg-blue-500 text-lg italic font-semibold hover:bg-orange-700 text-white py-2 px-4
+    }
+  }
