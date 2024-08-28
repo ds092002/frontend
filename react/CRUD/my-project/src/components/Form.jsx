@@ -128,7 +128,7 @@ const Form = ({ onSubmit, initialData, onCancel }) => {
           </button>
         </div>
       </form>
-    </div>
+     </div>
   );
 };
 

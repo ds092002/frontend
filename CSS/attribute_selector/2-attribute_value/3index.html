@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Attribute Selector Example</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        /* Selects an anchor tag with a specific rel attribute and styles it */
+        a[rel="external"] {
+            color: white;
+            background-color: #007bff;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a[rel="external"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <main>
+        <p>Click the link below to visit an external website:</p>
+        <a href="https://example.com" rel="external">Visit Example.com</a>
+    </main>
+</body>
+
+</html>
