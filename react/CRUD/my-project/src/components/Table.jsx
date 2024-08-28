@@ -95,7 +95,7 @@ const TableData = () => {
               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.age}</td>
               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.gender}</td>
               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.location}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm font-medium flex justify-center items-center">
+              <td className="px-4 py-4 whitespace-nowrap text-sm font-medium flex justify-start items-center">
                 <div
                   className="relative inline-block"
                   onMouseEnter={() => handleMouseEnter(item.id, 'view')}
