@@ -3,7 +3,7 @@ import { GrFormView } from "react-icons/gr";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 
-const TableData = () => {
+const Home = () => {
   const [userData, setUserData] = useState([]);
   const [filterValue, setFilterValue] = useState("");
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -171,4 +171,4 @@ const TableData = () => {
   );
 };
 
-export default TableData;
+export default Home;

@@ -1,13 +1,11 @@
 import React from 'react'
-import TableData from './components/Table'
-import Form from './components/Form'
+import Layout from './pages/Layout'
 
 function App() {
 
   return (
     <>
-      <TableData/>
-      <Form/>
+    <Layout />
     </>
   )
 }
