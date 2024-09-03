@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { GrFormView } from "react-icons/gr";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [userData, setUserData] = useState([]);
@@ -110,11 +111,12 @@ const Home = () => {
                   </button>
                   {showTooltip[item.id] === 'view' && (
                     <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
-                      View
+                      View Profile
                     </div>
                   )}
                 </div>
 
+                <Link to='/edit'>
                 <div
                   className="relative inline-block"
                   onMouseEnter={() => handleMouseEnter(item.id, 'edit')}
@@ -129,6 +131,7 @@ const Home = () => {
                     </div>
                   )}
                 </div>
+                </Link>  
 
                 <div
                   className="relative inline-block"

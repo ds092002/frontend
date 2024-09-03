@@ -16,11 +16,43 @@ const Login = () => {
                   <div className="relative">
                     <input
                       autocomplete="off"
+                      id="name"
+                      name="name"
+                      type="name"
+                      className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                      placeholder="First Name"
+                    />
+                    <label
+                      for="Name"
+                      className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      First Name
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      autocomplete="off"
+                      id="name"
+                      name="name"
+                      type="name"
+                      className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                      placeholder="Last Name"
+                    />
+                    <label
+                      for="Last Name"
+                      className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Last Name
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      autocomplete="off"
                       id="email"
                       name="email"
-                      type="text"
+                      type="email"
                       className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                      placeholder="Email address"
+                      placeholder="Email Address"
                     />
                     <label
                       for="email"
@@ -32,19 +64,36 @@ const Login = () => {
                   <div className="relative">
                     <input
                       autocomplete="off"
-                      id="password"
-                      name="password"
-                      type="password"
+                      id="number"
+                      name="number"
+                      type=""
                       className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                      placeholder="Password"
+                      placeholder="Phone No"
                     />
                     <label
-                      for="password"
+                      for="number"
                       className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                     >
-                      Password
+                      Phone Number
                     </label>
                   </div>
+                  <div className="relative">
+                    <input
+                      autocomplete="off"
+                      id="number"
+                      name="number"
+                      type=""
+                      className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                      placeholder="Phone No"
+                    />
+                    <label
+                      for="number"
+                      className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >
+                      Phone Number
+                    </label>
+                  </div>
+                
                   <div className="relative">
                     <button className="bg-cyan-500 text-white rounded-md px-2 py-1">
                       Submit
