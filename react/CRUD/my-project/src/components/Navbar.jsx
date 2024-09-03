@@ -30,7 +30,7 @@ const Navbar = () => {
     return (
         <div>
             <div className="relative w-full">
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+                <div className="mx-auto flex  items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                     <div className="inline-flex items-center space-x-2">
                         <span>
                             <svg

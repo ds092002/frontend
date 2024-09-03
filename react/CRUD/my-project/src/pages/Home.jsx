@@ -12,7 +12,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/data');
+      const response = await fetch('http://localhost:3000/student');
       const data = await response.json();
       setUserData(data);
     } catch (error) {
@@ -80,6 +80,8 @@ const Home = () => {
             <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Age</th>
             <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Gender</th>
             <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Location</th>
+            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Phone Number</th>
+            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Email</th>
             <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
           </tr>
         </thead>
@@ -95,6 +97,8 @@ const Home = () => {
               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.age}</td>
               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.gender}</td>
               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.location}</td>
+              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.phone}</td>
+              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.email}</td>
               <td className="px-4 py-4 whitespace-nowrap text-sm font-medium flex justify-start items-center">
                 <div
                   className="relative inline-block"
