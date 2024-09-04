@@ -122,7 +122,8 @@ const Navbar = () => {
                                     <div className="mt-6">
                                         <nav className="grid gap-y-4">
                                             {menuItems.map((item) => (
-                                                <a
+                                                <Link
+                                                    to={item.to}
                                                     key={item.name}
                                                     href={item.href}
                                                     className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
@@ -130,26 +131,27 @@ const Navbar = () => {
                                                     <span className="ml-3 text-base font-medium text-gray-900">
                                                         {item.name}
                                                     </span>
-                                                    <span>
-                                                        <ChevronRight className="ml-3 h-4 w-4" />
-                                                    </span>
-                                                </a>
+                                                </Link>
                                             ))}
                                         </nav>
                                     </div>
                                     <div className="mt-2 space-y-2">
+                                    <Link to='/profile'>
                                         <button
                                             type="button"
                                             className="w-full rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                                         >
                                             Profile
                                         </button>
+                                    </Link>
+                                    <Link to='/login'>
                                         <button
                                             type="button"
                                             className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                                         >
                                             Log In
                                         </button>
+                                    </Link>
                                     </div>
                                 </div>
                             </div>

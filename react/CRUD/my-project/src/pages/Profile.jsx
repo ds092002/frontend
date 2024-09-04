@@ -18,7 +18,7 @@ const Profile = () => {
 
   return (
     <div className=''>
-    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-10 container mx-auto">
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-10 container mx-auto">
       {data.map((student, index) => (
         <div key={index} className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="bg-gray-200 h-40 flex justify-center items-center">
