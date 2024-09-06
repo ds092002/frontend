@@ -7,11 +7,10 @@ import { useNavigate } from 'react-router-dom'
 
 const Add = () => {
 
-
   const navigate = useNavigate()
 
   const [student, setStudents] = useState({
-    id:1,
+    id: "1",
     firstname: "",
     lastname: "",
     email: "",
@@ -23,12 +22,13 @@ const Add = () => {
   })
 
   useEffect(() => {
-    const lastId = localStorage.getItem('lastStudenId')
-    if (lastId) {
-      setStudents((prevState) => ({...prevState,
-        id:parseInt(lastId) + 1}))
+    const lastId = localStorage.getItem('lastStudentId' , "")
+    if(lastId){
+      setStudents((prevState) => ({...prevState , id:`${parseInt(lastId) + 1}`}))
+      // console.log(setStudents , 'setStudent');
     }
   } , [])
+
 
   const handleChange = (e) => {
     const file = e.target.files[0]
@@ -45,6 +45,7 @@ const Add = () => {
     e.preventDefault()
     axios.post('http://localhost:3000/student', student)
       .then(() => {
+        localStorage.setItem('lastStudentId' , student.id)
         navigate('/')
       })
   }

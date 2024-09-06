@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowLeft } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Edit = () => {
   return (
@@ -107,12 +108,14 @@ const Edit = () => {
                 </div>
               </div>
               <div className='flex space-x-12'>
+                <Link to='/'>
                 <button
                   type="button"
                   className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
                   Go Back <ArrowLeft className="ml-2" size={16} />
                 </button>
+                </Link>
                 <button
                   type="button"
                   className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"

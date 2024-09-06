@@ -3,6 +3,7 @@ import { GrFormView } from "react-icons/gr";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Home = () => {
   const [userData, setUserData] = useState([]);
@@ -10,6 +11,31 @@ const Home = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [page, setPage] = useState(1);
   const [showTooltip, setShowTooltip] = useState({});
+
+  const [data, setData] = useState([]);
+
+  const loadStudent  = async () => {
+    const res = await axios.get('http://localhost:3000/student');
+    setData(res.data)
+    if (res.data.length === 0) {
+      localStorage.removeItem('lastStudentId')
+      // console.log('Call Local Storage');
+    }
+  }
+
+  useEffect(() => {
+    loadStudent()
+  }, [])
+
+  const DeleteStudent = (id) => {
+    axios.delete(`http://localhost:3000/student/${id}`)
+    .then((res) => {
+      loadStudent()
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
 
   const fetchData = async () => {
     try {
@@ -87,7 +113,7 @@ const Home = () => {
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
-          {paginatedItems.map(item => (
+          {data.map(item => (
             <tr key={item.id}>
               <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
               <td className="px-4 py-4 whitespace-nowrap">
@@ -138,7 +164,7 @@ const Home = () => {
                   onMouseEnter={() => handleMouseEnter(item.id, 'delete')}
                   onMouseLeave={() => handleMouseLeave(item.id)}
                 >
-                  <button className="text-red-500 hover:text-red-700 text-xl">
+                  <button className="text-red-500 hover:text-red-700 text-xl" onClick={() => DeleteStudent(item.id)}>
                     <MdDeleteOutline />
                   </button>
                   {showTooltip[item.id] === 'delete' && (
