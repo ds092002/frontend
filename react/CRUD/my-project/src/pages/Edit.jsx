@@ -1,8 +1,58 @@
 import React from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useNavigate, useParams} from 'react-router-dom'
 
 const Edit = () => {
+
+  const navigate = useNavigate()
+
+  const [student, setStudents] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    age: "",
+    gender: "",
+    location: "",
+    image: ""
+  })
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios.get(`http://localhost:3000/student/${id}`, student)
+      .then((res) => {
+        setStudents(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const onUpdateStudet = async(e) => {
+    e.preventDefault()
+    axios.put(`http://localhost:3000/student/${id}`, student)
+      .then((res) => {
+        console.log(res);
+        navigate('/')
+      })
+  }
+
+  const handleChange = (e) => {
+    const file = e.target.files[0]
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setStudents({ ...student, image: reader.result })
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+
+
   return (
     <section>
       <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
@@ -34,22 +84,41 @@ const Edit = () => {
               Login In
             </a>
           </p>
-          <form action="#" method="POST" className="mt-8">
+          <form action="#" method="POST" className="mt-8" onSubmit={onUpdateStudet}>
             <div className="space-y-5">
               <div>
-                <label htmlFor="name" className="text-base font-medium text-gray-900">
+                <label htmlFor="firstname" className="text-base font-medium text-gray-900">
                   {' '}
-                  Full Name{' '}
+                  First name{' '}
                 </label>
                 <div className="mt-2">
                   <input
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="text"
-                    placeholder="Full Name"
-                    id="name"
+                    placeholder="First Name"
+                    id="firstname"
+                    name='firstname'
+                    onChange={(e) => setStudents({ ...student, firstname: e.target.value })}
                   ></input>
                 </div>
               </div>
+              <div>
+                <label htmlFor="lastname" className="text-base font-medium text-gray-900">
+                  {' '}
+                  Last name{' '}
+                </label>
+                <div className="mt-2">
+                  <input
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    type="text"
+                    placeholder="Last Name"
+                    id="lastname"
+                    name='lastname'
+                    onChange={(e) => setStudents({ ...student, lastname: e.target.value })}
+                  ></input>
+                </div>
+              </div>
+
               <div>
                 <label htmlFor="email" className="text-base font-medium text-gray-900">
                   {' '}
@@ -61,12 +130,14 @@ const Edit = () => {
                     type="email"
                     placeholder="Email"
                     id="email"
+                    value={student.email}
+                    onChange={e => setStudents({ ...student, email: e.target.value })}
                   ></input>
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="text-base font-medium text-gray-900">
+                  <label htmlFor="number" className="text-base font-medium text-gray-900">
                     {' '}
                     PhoneNo{' '}
                   </label>
@@ -77,11 +148,47 @@ const Edit = () => {
                     type="number"
                     placeholder="PhoneNo"
                     id="number"
+                    value={student.phone}
+                    onChange={e => setStudents({ ...student, phone: e.target.value })}
                   ></input>
                 </div>
               </div>
               <div>
-                <label htmlFor="name" className="text-base font-medium text-gray-900">
+                <label htmlFor="gender" className="text-base font-medium text-gray-900">
+                  Gender
+                </label>
+                <div className="mt-2 flex space-x-4">
+                  <div className="flex items-center">
+                    <input
+                      className="h-4 w-4 text-black focus:ring-gray-400 border-gray-300"
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="Male"
+                      onChange={(e) => setStudents({ ...student, gender: e.target.value })}
+                    />
+                    <label htmlFor="male" className="ml-2 block text-sm font-medium text-gray-900">
+                      Male
+                    </label>
+                  </div>
+                  <div className="flex items-center">
+                    <input
+                      className="h-4 w-4 text-black focus:ring-gray-400 border-gray-300"
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="Female"
+                      onChange={(e) => setStudents({ ...student, gender: e.target.value })}
+                    />
+                    <label htmlFor="female" className="ml-2 block text-sm font-medium text-gray-900">
+                      Female
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="age" className="text-base font-medium text-gray-900">
                   {' '}
                   Age{' '}
                 </label>
@@ -91,11 +198,30 @@ const Edit = () => {
                     type="number"
                     placeholder="Age"
                     id="number"
+                    value={student.age}
+                    onChange={e => setStudents({ ...student, age: e.target.value })}
                   ></input>
                 </div>
               </div>
+
               <div>
-                <label htmlFor="name" className="text-base font-medium text-gray-900">
+                <label htmlFor="location" className="text-base font-medium text-gray-900">
+                  Location
+                </label>
+                <div className="mt-2">
+                  <input
+                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                    type="text"
+                    placeholder="Location"
+                    id="location"
+                    name="location"
+                    onChange={(e) => setStudents({ ...student, location: e.target.value })}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="file" className="text-base font-medium text-gray-900">
                   {' '}
                   Image{' '}
                 </label>
@@ -104,20 +230,21 @@ const Edit = () => {
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="file"
                     id="file"
+                    onChange={handleChange}
                   ></input>
                 </div>
               </div>
               <div className='flex space-x-12'>
                 <Link to='/'>
-                <button
-                  type="button"
-                  className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
-                >
-                  Go Back <ArrowLeft className="ml-2" size={16} />
-                </button>
+                  <button
+                    type="button"
+                    className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80 text-nowrap"
+                  >
+                    Go Back <ArrowLeft className="ml-2" size={16} />
+                  </button>
                 </Link>
                 <button
-                  type="button"
+                  type="submit"
                   className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
                   Edit Students

@@ -142,13 +142,13 @@ const Home = () => {
                   )}
                 </div>
 
-                <Link to='/edit'>
+                <Link to={`/edit/${item.id}`}>
                 <div
                   className="relative inline-block"
                   onMouseEnter={() => handleMouseEnter(item.id, 'edit')}
                   onMouseLeave={() => handleMouseLeave(item.id)}
                 >
-                  <button className="text-yellow-500 hover:text-yellow-700 text-xl mx-2">
+                  <button className="text-yellow-500 hover:text-yellow-700 text-xl mx-2" >
                     <FaRegEdit />
                   </button>
                   {showTooltip[item.id] === 'edit' && (
