@@ -95,6 +95,7 @@ const Add = () => {
                     placeholder="First Name"
                     id="firstname"
                     name='firstname'
+                    value={student.firstname}
                     onChange={(e) => setStudents({ ...student, firstname: e.target.value })}
                   ></input>
                 </div>
@@ -111,6 +112,7 @@ const Add = () => {
                     placeholder="Last Name"
                     id="lastname"
                     name='lastname'
+                    value={student.lastname}
                     onChange={(e) => setStudents({ ...student, lastname: e.target.value })}
                   ></input>
                 </div>
@@ -127,6 +129,7 @@ const Add = () => {
                     placeholder="Email"
                     id="email"
                     name='email'
+                    value={student.email}
                     onChange={(e) => setStudents({ ...student, email: e.target.value })}
                   ></input>
                 </div>
@@ -145,6 +148,7 @@ const Add = () => {
                     placeholder="PhoneNo"
                     id="number"
                     name='number'
+                    value={student.phone}
                     onChange={(e) => setStudents({ ...student, phone: e.target.value })}
                   ></input>
                 </div>
@@ -193,12 +197,13 @@ const Add = () => {
                     className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="number"
                     placeholder="Age"
-                    id="age"
-                    name='age'
-                    onChange={(e) => setStudents({ ...student, age: e.target.value })}
+                    id="number"
+                    value={student.age}
+                    onChange={e => setStudents({ ...student, age: e.target.value })}
                   ></input>
                 </div>
               </div>
+
               <div>
                 <label htmlFor="location" className="text-base font-medium text-gray-900">
                   Location
@@ -210,6 +215,7 @@ const Add = () => {
                     placeholder="Location"
                     id="location"
                     name="location"
+                    value={student.location}
                     onChange={(e) => setStudents({ ...student, location: e.target.value })}
                   />
                 </div>

@@ -12,7 +12,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [showTooltip, setShowTooltip] = useState({});
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   const loadStudent  = async () => {
     const res = await axios.get('http://localhost:3000/student');
@@ -56,7 +56,9 @@ const Home = () => {
   const filteredItems = useMemo(() => {
     return userData.filter(item =>
       item.firstname.toLowerCase().includes(filterValue.toLowerCase()) ||
-      item.lastname.toLowerCase().includes(filterValue.toLowerCase())
+      item.lastname.toLowerCase().includes(filterValue.toLowerCase()) ||
+      item.email.toLowerCase().includes(filterValue.toLowerCase()) ||
+      item.phone.toLowerCase().includes(filterValue.toLowerCase())
     );
   }, [filterValue, userData]);
 
@@ -113,7 +115,7 @@ const Home = () => {
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
-          {data.map(item => (
+          {paginatedItems.map(item => (
             <tr key={item.id}>
               <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
               <td className="px-4 py-4 whitespace-nowrap">
