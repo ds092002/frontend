@@ -12,44 +12,27 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [showTooltip, setShowTooltip] = useState({});
 
-  // const [data, setData] = useState([]);
-
-  const loadStudent  = async () => {
+  const loadStudent = async () => {
     const res = await axios.get('http://localhost:3000/student');
-    setData(res.data)
+    setUserData(res.data);
     if (res.data.length === 0) {
-      localStorage.removeItem('lastStudentId')
-      // console.log('Call Local Storage');
+      localStorage.removeItem('lastStudentId');
     }
   }
 
   useEffect(() => {
-    loadStudent()
-  }, [])
+    loadStudent();
+  }, []);
 
   const DeleteStudent = (id) => {
     axios.delete(`http://localhost:3000/student/${id}`)
-    .then((res) => {
-      loadStudent()
+    .then(() => {
+      loadStudent();
     })
     .catch((error) => {
       console.log(error);
-    })
+    });
   }
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/student');
-      const data = await response.json();
-      setUserData(data);
-    } catch (error) {
-      console.log('Error fetching data:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const pages = Math.ceil(userData.length / rowsPerPage);
 
@@ -99,87 +82,89 @@ const Home = () => {
         </select>
       </div>
 
-      <table className="min-w-full divide-y divide-gray-200 bg-white shadow rounded-lg">
-        <thead className="bg-blue-600 text-white">
-          <tr>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Id</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Image</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">First Name</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Last Name</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Age</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Gender</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Location</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Phone Number</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Email</th>
-            <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {paginatedItems.map(item => (
-            <tr key={item.id}>
-              <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
-              <td className="px-4 py-4 whitespace-nowrap">
-                <img src={item.image} alt="Avatar" className="w-12 h-12 rounded-full border-2 border-gray-200" />
-              </td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.firstname}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.lastname}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.age}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.gender}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.location}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.phone}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.email}</td>
-              <td className="px-4 py-4 whitespace-nowrap text-sm font-medium flex justify-start items-center">
-                <div
-                  className="relative inline-block"
-                  onMouseEnter={() => handleMouseEnter(item.id, 'view')}
-                  onMouseLeave={() => handleMouseLeave(item.id)}
-                >
-                  <button className="text-blue-500 hover:text-blue-700 text-2xl">
-                    <GrFormView />
-                  </button>
-                  {showTooltip[item.id] === 'view' && (
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
-                      View Profile
-                    </div>
-                  )}
-                </div>
-
-                <Link to={`/edit/${item.id}`}>
-                <div
-                  className="relative inline-block"
-                  onMouseEnter={() => handleMouseEnter(item.id, 'edit')}
-                  onMouseLeave={() => handleMouseLeave(item.id)}
-                >
-                  <button className="text-yellow-500 hover:text-yellow-700 text-xl mx-2" >
-                    <FaRegEdit />
-                  </button>
-                  {showTooltip[item.id] === 'edit' && (
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
-                      Edit
-                    </div>
-                  )}
-                </div>
-                </Link>  
-
-                <div
-                  className="relative inline-block"
-                  onMouseEnter={() => handleMouseEnter(item.id, 'delete')}
-                  onMouseLeave={() => handleMouseLeave(item.id)}
-                >
-                  <button className="text-red-500 hover:text-red-700 text-xl" onClick={() => DeleteStudent(item.id)}>
-                    <MdDeleteOutline />
-                  </button>
-                  {showTooltip[item.id] === 'delete' && (
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
-                      Delete
-                    </div>
-                  )}
-                </div>
-              </td>
+      <div className="overflow-x-auto shadow-lg">
+        <table className="min-w-full divide-y divide-gray-200 bg-white rounded-lg">
+          <thead className="bg-blue-600 text-white">
+            <tr>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Id</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Image</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">First Name</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Last Name</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Age</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Gender</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Location</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Phone Number</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Email</th>
+              <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {paginatedItems.map(item => (
+              <tr key={item.id}>
+                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
+                <td className="px-4 py-4 whitespace-nowrap">
+                  <img src={item.image} alt="Avatar" className="w-12 h-12 rounded-full border-2 border-gray-200" />
+                </td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.firstname}</td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.lastname}</td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.age}</td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.gender}</td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.location}</td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.phone}</td>
+                <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{item.email}</td>
+                <td className="px-4 py-7 whitespace-nowrap text-sm font-medium flex justify-center items-center space-x-2">
+                  <div
+                    className="relative inline-block"
+                    onMouseEnter={() => handleMouseEnter(item.id, 'view')}
+                    onMouseLeave={() => handleMouseLeave(item.id)}
+                  >
+                    <button className="text-blue-500 hover:text-blue-700 text-xl">
+                      <GrFormView />
+                    </button>
+                    {showTooltip[item.id] === 'view' && (
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
+                        View Profile
+                      </div>
+                    )}
+                  </div>
+
+                  <Link to={`/edit/${item.id}`}>
+                    <div
+                      className="relative inline-block"
+                      onMouseEnter={() => handleMouseEnter(item.id, 'edit')}
+                      onMouseLeave={() => handleMouseLeave(item.id)}
+                    >
+                      <button className="text-yellow-500 hover:text-yellow-700 text-xl mx-2">
+                        <FaRegEdit />
+                      </button>
+                      {showTooltip[item.id] === 'edit' && (
+                        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
+                          Edit
+                        </div>
+                      )}
+                    </div>
+                  </Link>
+
+                  <div
+                    className="relative inline-block"
+                    onMouseEnter={() => handleMouseEnter(item.id, 'delete')}
+                    onMouseLeave={() => handleMouseLeave(item.id)}
+                  >
+                    <button className="text-red-500 hover:text-red-700 text-xl" onClick={() => DeleteStudent(item.id)}>
+                      <MdDeleteOutline />
+                    </button>
+                    {showTooltip[item.id] === 'delete' && (
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded p-2">
+                        Delete
+                      </div>
+                    )}
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="mt-6 flex items-center justify-between">
         <span className="text-sm text-gray-600">
