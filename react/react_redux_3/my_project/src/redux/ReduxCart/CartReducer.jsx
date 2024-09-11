@@ -8,22 +8,20 @@ const CartReducer = (data = [], action) => {
 
         case REMOVE_TO_CART: 
         console.log('Remove to Cart', action);
-        data.length =  data.length ? data.length -1 : []
-        return[...data]
+           return data.filter(item => item.id !== action.data.id)
 
         case EMPTY_CART: 
         console.log('Empty Cart', action);
-        data = []
-        return[...data]
+        return[]
 
         case CART_TO_WISHLIST: return{
-            
+            ...state
         }
         case INCREMENT: return{
-            
+            ...state
         }
         case DECREMENT: return{
-            
+            ...state
         }
         default:return data
     }

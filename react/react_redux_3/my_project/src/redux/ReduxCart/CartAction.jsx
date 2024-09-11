@@ -6,10 +6,10 @@ export const add_to_cart = (data) => {
         data
     }
 }
-export const remove_to_cart = (data) => {
+export const remove_to_cart = (id) => {
     return{
         type:REMOVE_TO_CART,
-        data
+        data:{id}
     }
 }
 export const empty_cart = (data) => {

@@ -6,32 +6,23 @@ import axios from 'axios'
 const Home = () => {
 
 
-  const [product, setProductData] = useState([]);
-  console.log('Home Data', product);
+  const [product, setProduct] =  useState([])
   
-
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await fetch('http://localhost:3000/ecomall');
-  //     const data = await response.json();
-  //     setHomeData(data);
-  //   } catch (error) {
-  //     console.log('Error fetching data:', error);
-  //   }
-  // };
+  console.log('home product', product);
 
   useEffect(() => {
     const res = axios.get('http://localhost:3000/ecomall')
     .then((res) => {
-      setProductData(res.data)
-      console.log('Home Data', res.data);
+      setProduct(res.data)
+      console.log('Home data', res.data);
     })
-  }, []);
+  }, [])
 
-  const productData = useSelector((state => state.cart))
-  console.log('Product Data',productData);
-  
+  const productData =  useSelector((state => state.cart))
   const dispatch = useDispatch()
+  
+  console.log('product data', productData);
+  
 
   return (
     <div className=''>
@@ -40,7 +31,7 @@ const Home = () => {
         <h1 className='flex justify-center items-center text-3xl italic font-bold'>This is Home page</h1>
         <div className='flex container flex-wrap justify-between space-y-4 mx-auto mt-10'>
         {
-            product.map((item, index) =>  (
+            product.map((item) =>  (
               <div className="flex font-sans border rounded-2xl w-[550px] overflow-hidden">
                 <div className="w-48 md:w-64 relative">
                   <img src={item.image} alt="" className="absolute inset-0 w-50% h-full object-contain" loading="lazy" />
@@ -57,19 +48,9 @@ const Home = () => {
                   <div className="text-lg font-semibold text-slate-500 flex-wrap">
                     RS.{item.price}
                   </div>
-                  <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
-                    <div className="space-x-2 flex text-sm">
-                      <label>
-                        <input className="sr-only peer" name="size" type="radio" value="xs" checked />
-                        <div className="w-44 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
-                          {item.category}
-                        </div>
-                      </label>
-                    </div>
-                  </div>
                   <div className="flex space-x-4 mb-6 text-sm font-medium">
                     <div className="flex-auto flex space-x-4">
-                      <button className="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900 hover:text-slate-200 hover:bg-slate-900 transition duration-300" type="submit" onClick={() => dispatch(add_to_cart(item))}>
+                      <button className="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900 hover:text-slate-200 hover:bg-slate-900 transition duration-300" type="button" onClick={() => dispatch(add_to_cart(item))}>
                         Add To cart
                       </button>
                     </div>
@@ -80,7 +61,7 @@ const Home = () => {
                     </button>
                   </div>
                   <p className="text-sm text-slate-700">
-                    Free shipping on all continental US orders.
+                    Free shipping on all continental India orders.
                   </p>
                 </form>
               </div>
