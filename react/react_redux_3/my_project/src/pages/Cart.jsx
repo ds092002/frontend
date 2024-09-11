@@ -11,7 +11,6 @@ const Cart = () => {
   
   return (
     <div>
-      <h1 className=''>This is Cart Page 1</h1>
       <button onClick={() => dispatch(empty_cart())}>Empty Cart</button>
       <div className='flex justify-center items-center h-lvh text-center'>
         <table className='table-fixed w-[800px]'>

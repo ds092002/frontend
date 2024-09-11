@@ -2,6 +2,9 @@ import React from 'react'
 import { NavLink, Outlet, Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import {useSelector} from 'react-redux'
+import { IoCartOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa";
+
 
 const menuItems = [
     {
@@ -20,19 +23,12 @@ const menuItems = [
         name: 'Product',
         to: '/product',
     },
-    {
-        name: 'Whishlist',
-        to: '/whishlist',
-    },
-    {
-        name: 'Cart',
-        to: '/cart',
-    },
 ]
 
 export function Navbar() {
 
-    const result = useSelector((state) => state.cart)
+    const result1 = useSelector((state) => state.cart)
+    const result2 = useSelector((state) => state.whishlist)
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
@@ -67,16 +63,29 @@ export function Navbar() {
                         ))}
                     </ul>
                 </div>
-                <div className="hidden lg:inline-block relative ">
+                <div className="hidden lg:flex space-x-4">
+                    <div className='relative'>
                     <Link to='/cart'>
                     <button
                         type="button"
-                        className="rounded-md    bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        className="rounded-md    bg-black px-3 py-2 text-xl font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
-                        Cart
+                        <IoCartOutline />
                     </button>
                     </Link>
-                    <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 border rounded-full px-1 bg-black text-white text-xs">0</span>
+                    <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 border rounded-full px-1 bg-black text-white text-xs">{result1.length}</span>
+                    </div>
+                    <div className='relative '>
+                    <Link to='/whishlist'>
+                    <button
+                        type="button"
+                        className="rounded-md    bg-black px-3 py-2 text-xl font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    >
+                        <FaRegHeart />
+                    </button>
+                    </Link>
+                    <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 border rounded-full px-1 bg-black text-white text-xs">{result2.length}</span>
+                    </div>
                 </div>
                 <div className="lg:hidden">
                     <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { add_to_cart } from '../redux/ReduxCart/CartAction'
+import { add_to_whishlist } from '../redux/ReduxWhishList/WhishlistAction'
 import axios from 'axios'
+import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
 
@@ -19,9 +21,11 @@ const Home = () => {
   }, [])
 
   const productData =  useSelector((state => state.cart))
+  const whishlistData = useSelector((state => state.whishlist))
   const dispatch = useDispatch()
   
   console.log('product data', productData);
+  console.log('WhishList Data', whishlistData); 
   
 
   return (
@@ -31,7 +35,7 @@ const Home = () => {
         <h1 className='flex justify-center items-center text-3xl italic font-bold'>This is Home page</h1>
         <div className='flex container flex-wrap justify-between space-y-4 mx-auto mt-10'>
         {
-            product.map((item) =>  (
+            product.map((item ) =>  (
               <div className="flex font-sans border rounded-2xl w-[550px] overflow-hidden">
                 <div className="w-48 md:w-64 relative">
                   <img src={item.image} alt="" className="absolute inset-0 w-50% h-full object-contain" loading="lazy" />
@@ -54,10 +58,8 @@ const Home = () => {
                         Add To cart
                       </button>
                     </div>
-                    <button className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
-                      <svg width="20" height="20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
-                      </svg>
+                    <button className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like" onClick={() => dispatch(add_to_whishlist(item))}>
+                    <FaRegHeart/>
                     </button>
                   </div>
                   <p className="text-sm text-slate-700">
