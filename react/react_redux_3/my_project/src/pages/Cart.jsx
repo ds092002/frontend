@@ -25,13 +25,13 @@ const Cart = () => {
               return (
                 <tr key={item.id} className=''>
                   <td>
-                    <img src={item.image} alt="cartimage" className='w-12 h-12' />
+                    <img src={item.image} alt="cartimage" className='w-12 h-12 mx-auto' />
                   </td>
                   <td className=''>
                     <h2 className='text-wrap w-28 mx-auto line-clamp-1'>{item.title}</h2>
                   </td>
                   <td>
-                    <p>${item.price}</p>
+                    <p>RS.{item.price}</p>
                   </td>
                   <td>
                     <button onClick={() => dispatch(remove_to_cart(item.id))} className='btn'>Remove</button>

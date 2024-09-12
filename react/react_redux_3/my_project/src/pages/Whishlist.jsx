@@ -35,7 +35,7 @@ const WhishList = () => {
               return (
                 <tr key={item.id} className=''>
                   <td>
-                    <img src={item.image} alt="cartimage" className='w-12 h-12' />
+                    <img src={item.image} alt="cartimage" className='w-12 h-12 mx-auto' />
                   </td>
                   <td className=''>
                     <h2 className='text-wrap w-28 mx-auto line-clamp-1'>{item.title}</h2>
