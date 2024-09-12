@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { add_to_cart } from '../redux/ReduxCart/CartAction'
 import { add_to_whishlist } from '../redux/ReduxWhishList/WhishlistAction'
 import axios from 'axios'
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 const Home = () => {
 
@@ -23,6 +23,17 @@ const Home = () => {
   const productData =  useSelector((state => state.cart))
   const whishlistData = useSelector((state => state.whishlist))
   const dispatch = useDispatch()
+
+  const isInWishlist = (productId) => whishlistData.some(item => item.id === productId)
+
+  // Handle the click on the heart icon
+  const handleWishlistClick = (item) => {
+    if (isInWishlist(item.id)) {
+      dispatch(remove_from_whishlist(item))
+    } else {
+      dispatch(add_to_whishlist(item))
+    }
+  }
   
   console.log('product data', productData);
   console.log('WhishList Data', whishlistData); 
@@ -58,9 +69,14 @@ const Home = () => {
                         Add To cart
                       </button>
                     </div>
-                    <button className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like" onClick={() => dispatch(add_to_whishlist(item))}>
-                    <FaRegHeart/>
-                    </button>
+                    <button
+                  className={`flex-none flex items-center justify-center text-lg rounded-md ${isInWishlist(item.id) ? 'text-red-500' : 'text-black'}`}
+                  type="button"
+                  aria-label="Like"
+                  onClick={() => handleWishlistClick(item)}
+                >
+                  {isInWishlist(item.id) ? <FaHeart /> : <FaRegHeart />}
+                </button>
                   </div>
                   <p className="text-sm text-slate-700">
                     Free shipping on all continental India orders.
