@@ -20,6 +20,10 @@ const menuItems = [
         to: '/shop',
     },
     {
+        name: 'Blog',
+        to: '/blog',
+    },
+    {
         name: 'Product',
         to: '/product',
     },
