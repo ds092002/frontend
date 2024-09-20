@@ -41,7 +41,7 @@ const Home = () => {
 
 
   return (
-    <div className=''>
+    <div className='mb-10'>
 
       <div>
         <h1 className='flex justify-center items-center text-3xl italic font-bold'>This is Home page</h1>
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
                 <form className="flex-auto p-6">
                   <div className="flex flex-wrap">
-                    <h1 className="flex-auto text-lg font-semibold text-slate-900 line">
+                    <h1 className="flex-auto text-lg font-semibold text-slate-900 line-clamp-1">
                       {item.title}
                     </h1>
                     <div className="w-full flex-none text-sm font-medium text-slate-700 mt-2">
