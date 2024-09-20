@@ -80,7 +80,7 @@ const AboutUs = () => {
   return (
     <div>
 
-      <div className="mx-auto max-w-7xl px-4">
+      <div className=" px-4">
         {/* Hero Map */}
         <div className="flex flex-col space-y-8 pb-10 pt-12 md:pt-24">
           <div className="max-w-max rounded-full border bg-gray-50 p-1 px-3">
