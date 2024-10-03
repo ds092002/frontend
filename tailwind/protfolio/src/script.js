@@ -189,10 +189,12 @@ let ProjectImage = document.getElementById("Project-Image");
 
 
 let portfolioWebsite = document.querySelector(".Portfolio-website ");
-let GymSoWebsite = document.querySelector(".Gymso-website");
+let GymSoWebsite = document.querySelector(".Gymso-website ");
 let ecomallWebsite = document.querySelector(".Ecomall-website");
 let furnitureWebsite = document.querySelector(".Furniture-website");
-let budgetAppWebsite = document.querySelector(".BudgetApp-website");
+let AplicaWebsite = document.querySelector(".Aplica-website");
+let ItServiceWebsite = document.querySelector(".ItService-website");
+let gradientGenerator = document.querySelector(".gradient-generator");
 
 
 
@@ -212,7 +214,7 @@ portfolioWebsite.addEventListener("click", () => {
 GymSoWebsite.addEventListener("click", () => {
     websiteName.innerText = "Gym so Website";
     clientName.innerText = "Skill Code"
-    languages.innerText = "html,css";
+    languages.innerText = "html,css,javascript";
     preview.innerText = "GymSo";
     preview.addEventListener("click", () => {
         open("https://github.com/ds092002/frontend/tree/main/CSS/webpage/gym");
@@ -230,7 +232,7 @@ ecomallWebsite.addEventListener("click", () => {
     preview.addEventListener("click", () => {
         open("https://github.com/ds092002/myReact_project");
     });
-    ProjectImage.src = "./assets/ecomall.png";
+    ProjectImage.src = "./assets/Pi-network-heropage-photo.png";
 
     description.classList.remove("hidden");
     description.classList.add("flex");
@@ -238,25 +240,64 @@ ecomallWebsite.addEventListener("click", () => {
 furnitureWebsite.addEventListener("click", () => {
     websiteName.innerText = "Homy website";
     clientName.innerText = "Skill Code"
-    languages.innerText = "Express Js";
-    preview.innerText = "Funrniture App";
+    languages.innerText = "html,css,sass";
+    preview.innerText = "Homy website lading page";
     preview.addEventListener("click", () => {
         open("https://github.com/anshchovatiya/CSS/tree/17daa48e4e2d3b778a0a1687ab4aa4e0afe47596/Projects/Homy_website");
     });
-    ProjectImage.src = "./assets/furniture.jpeg";
+    ProjectImage.src = "./assets/homy-website-heropage-photo.png";
 
     description.classList.remove("hidden");
     description.classList.add("flex");
 })
-budgetAppWebsite.addEventListener("click", () => {
+AplicaWebsite.addEventListener("click", () => {
     websiteName.innerText = "Aplica website";
     clientName.innerText = "Skill Code"
-    languages.innerText = "html,css, Javascript";
-    preview.innerText = "Budget App page";
+    languages.innerText = "html,css";
+    preview.innerText = "Aplica website lading page";
     preview.addEventListener("click", () => {
         open("https://github.com/anshchovatiya/CSS/tree/17daa48e4e2d3b778a0a1687ab4aa4e0afe47596/Projects/Aplica_Website_Project");
     });
-    ProjectImage.src = "./assets/budget.png";
+    ProjectImage.src = "./assets/Aplica-website-homepage-photo.png";
+
+    description.classList.remove("hidden");
+    description.classList.add("flex");
+})
+HomyWebsite.addEventListener("click", () => {
+    websiteName.innerText = "Homy website";
+    clientName.innerText = "Skill Code"
+    languages.innerText = "html,css,sass";
+    preview.innerText = "Homy website lading page";
+    preview.addEventListener("click", () => {
+        open("https://github.com/anshchovatiya/CSS/tree/17daa48e4e2d3b778a0a1687ab4aa4e0afe47596/Projects/Homy_website");
+    });
+    ProjectImage.src = "./assets/homy-website-heropage-photo.png";
+
+    description.classList.remove("hidden");
+    description.classList.add("flex");
+})
+ItServiceWebsite.addEventListener("click", () => {
+    websiteName.innerText = "AcItServices";
+    clientName.innerText = "Skill Code"
+    languages.innerText = "html,css";
+    preview.innerText = "It Services landing page";
+    preview.addEventListener("click", () => {
+        open("https://github.com/anshchovatiya/CSS/tree/d22bd695ccad6a904c20ca10eda6796e258a8c9f/Projects/It%20servie%20page%20project");
+    });
+    ProjectImage.src = "./assets/Itservice-website-homepage-photo.png";
+
+    description.classList.remove("hidden");
+    description.classList.add("flex");
+})
+gradientGenerator.addEventListener("click", () => {
+    websiteName.innerText = "Random Gradient Generator";
+    clientName.innerText = "Skill Code"
+    languages.innerText = "html,css,Javascript";
+    preview.innerText = "Gradient Generator Page";
+    preview.addEventListener("click", () => {
+        open("https://github.com/anshchovatiya/Javascript/tree/a633cdad48cffb284f919557d115019792b04a49/Projects/gredientGenerator");
+    });
+    ProjectImage.src = "./assets/random-gradeint-generator.png";
 
     description.classList.remove("hidden");
     description.classList.add("flex");
