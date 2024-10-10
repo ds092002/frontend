@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import LogicalOp from './LogicalOp';
+import Form from './Form';
+import Counter from './Counter';
+import Toggle from './Toggle';
 
 function IfElseStatment() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,8 +24,11 @@ function IfElseStatment() {
       {content}
       <button onClick={handleLoadData} className="mt-4 p-2 bg-blue-500 text-white rounded">
         Load Data
-      </button>
-      <LogicalOp/>
+      </button><br/><br/><br/><br/>
+      <LogicalOp/><br/><br/><br/><br/>
+      <Form/><br/><br/><br/><br/>
+      <Counter/><br/><br/><br/><br/>
+      <Toggle/><br/><br/><br/><br/>
     </div>
   );
 }
