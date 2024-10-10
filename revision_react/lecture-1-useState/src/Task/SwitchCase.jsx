@@ -52,17 +52,19 @@ const SwitchCase = () => {
 
   return (
     <div>
-      <h1 className='p-2 bg-sky-400 text-white text-center'>Switch Case</h1>
+      <h1 className='p-2 bg-green-500 text-white text-center'>Switch Case</h1>
+      <div className='p-4 text-center'>
       <h3>Current Student: {studentName}</h3>
       <h3>Full Name: {fullName}</h3>
-
       <input
         type="text"
         value={inputValue}
         onChange={handleInputChange}
         placeholder="Enter student name"
+        className='mt-2 p-2 border border-gray-300 rounded mr-1'
       />
-      <button onClick={handleSwitchStudent}>Switch Student</button>
+      <button onClick={handleSwitchStudent} className="mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Switch Student</button>
+      </div>
     </div>
   );
 };

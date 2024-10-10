@@ -13,12 +13,12 @@ const Counter = () => {
 
   return (
     <div>
-      <h1 className='p-2 bg-sky-400 text-white text-center'>Counter Example</h1>
-      <div>
+      <h1 className='p-2 bg-indigo-600 text-white text-center'>Counter Example</h1>
+      <div className="text-center p-4">
         <h2>Current Count: {count}</h2>
         <button 
           onClick={handleIncrement} 
-          className="mt-2 p-2 bg-green-500 text-white rounded">
+          className="mt-2 p-2 mr-2 bg-green-500 text-white rounded">
           Increment
         </button>
         <button 
