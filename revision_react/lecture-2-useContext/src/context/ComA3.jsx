@@ -1,5 +1,5 @@
 import React from 'react'
-import { data } from '../App'
+// import { data } from '../App'
 import { useContext } from 'react'
 
 const ComA3 = () => {

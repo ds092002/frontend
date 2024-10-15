@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .heading{
+      @apply text-4xl text-white bg-teal-500 text-center p-2 border
+    }
+  }
