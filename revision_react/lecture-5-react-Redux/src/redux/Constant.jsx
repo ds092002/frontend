@@ -1,2 +1,2 @@
-export const BUY_DABELI = 'BUY_DABELI'
-export const BUY_VADAPAAV = 'BUY_VADAPAAV'
+export const BUY_COCO = 'BUY_COCO'
+export const BUY_THIKSHAK = 'BUY_THIKSHAK'

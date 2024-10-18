@@ -1,0 +1,20 @@
+React redux 
+
+state conatiner = redux store
+
+createStore (depricated)
+configureStore // react-redux-toolkit
+core react-redux
+redux-toolkit
+
+
+createStore
+constant
+Action
+Reducer
+store
+Provider
+
+
+hooks of react-redux : 1.  useSelector()
+                       2.  useDispatch()
