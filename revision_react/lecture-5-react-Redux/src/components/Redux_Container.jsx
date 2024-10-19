@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { buy_coco, buy_thikshak } from '../redux/Action'
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { buy_coco, buy_thikshak } from '../redux/Action';
 
 const Redux_Container = () => {
   const [isOutOfStock, setIsOutOfStock] = useState(false);
@@ -18,6 +18,11 @@ const Redux_Container = () => {
     } else {
       setOutOfStockItem('Coco');
       setIsOutOfStock(true);
+      console.log('Coco is out of stock');
+      // Automatically close the modal after 2 seconds
+      setTimeout(() => {
+        setIsOutOfStock(false);
+      }, 2000);
     }
   };
 
@@ -28,18 +33,21 @@ const Redux_Container = () => {
     } else {
       setOutOfStockItem('ThikShak');
       setIsOutOfStock(true);
+      // Automatically close the modal after 2 seconds
+      setTimeout(() => {
+        setIsOutOfStock(false);
+      }, 2000);
     }
   };
 
-  // Close the modal
+  // Close the modal manually (optional)
   const closeModal = () => {
     setIsOutOfStock(false);
   };
 
   console.log('CocoData:', CocoData);
-console.log('ThikShakData:', ThikShakData);
-console.log('isOutOfStock:', isOutOfStock);
-
+  console.log('ThikShakData:', ThikShakData);
+  console.log('isOutOfStock:', isOutOfStock);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
@@ -94,6 +102,6 @@ console.log('isOutOfStock:', isOutOfStock);
       )}
     </div>
   );
-}
+};
 
 export default Redux_Container;
