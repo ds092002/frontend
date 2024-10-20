@@ -1,0 +1,9 @@
+$('.btn').click(function(){
+    $('.box1').fadeIn(1000);
+    $('.box2').fadeIn(2000);
+    $('.box3').fadeIn(3000);
+    $('.box4').fadeIn(4000);
+    $('.box5').fadeIn(5000);
+    $('.box6').fadeIn(6000);
+    $('.box7').fadeIn(7000);
+});
