@@ -1,8 +1,8 @@
 $(function() {
 
     const jsonObject = {
-        "name": "Vijay Dankhara",
-        "age": 25,
+        "name": "Dhaval Solanki",
+        "age": 22,
         "city": "Surat",
         "skills": {
             "programming": "JavaScript",
