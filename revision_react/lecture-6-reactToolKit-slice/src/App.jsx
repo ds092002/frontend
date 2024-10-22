@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <Redux_container />
+       <Redux_container />
     </>
   )
 }

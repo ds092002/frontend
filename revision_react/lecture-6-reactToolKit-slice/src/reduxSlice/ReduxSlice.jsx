@@ -1,23 +1,27 @@
-import React from "react";
 import { createSlice } from "@reduxjs/toolkit";
 
-const ReduxSlice = createSlice(
-  {
-      name:'cake',
-      initialState:{
-        NumOfCake:20
-      },
-      reducers:{
-        increment:(state) => {
-          state.NumOfCake += 1 // state.NumOfCake = state.NumOfCake + 1
-        },
-        decrement:(state) => {
-          state.NumOfCake -= 1 // state.NumOfCake = state.NumOfCake - 1
-        }
-      }  
+const combinedSlice = createSlice({
+  name: 'products',
+  initialState: {
+    NumOfCake: 20,
+    NumOfCoco: 20,
+  },
+  reducers: {
+    incrementCake: (state) => {
+      state.NumOfCake += 1;        // state.NumOfCake = state.NumOfCake + 1
+    },
+    decrementCake: (state) => {
+      state.NumOfCake -= 1;        // state.NumOfCake = state.NumOfCake - 1
+    },
+    incrementCoco: (state) => {
+      state.NumOfCoco += 1;        // state.NumOfCoco = state.NumOfCoco + 1
+    },
+    decrementCoco: (state) => {
+      state.NumOfCoco -= 1;        // state.NumOfCoco = state.NumOfCoco - 1
+    }
   }
-);
+});
 
-export const {increment, decrement} = ReduxSlice.actions
+export const { incrementCake, decrementCake, incrementCoco, decrementCoco } = combinedSlice.actions;
 
-export default ReduxSlice.reducer;
+export default combinedSlice.reducer;

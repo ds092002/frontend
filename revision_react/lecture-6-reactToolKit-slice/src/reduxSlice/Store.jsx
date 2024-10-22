@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit"
-import reduxReducer from './ReduxSlice'
+import { configureStore } from "@reduxjs/toolkit";
+import combinedReducer from './ReduxSlice';
 
-const Store = configureStore( {
-    reducer:{
-        cake:reduxReducer   // alias from createSlice Reducer as name of the reducer
-    }
-})
+const store = configureStore({
+  reducer: {
+    products: combinedReducer  
+  }
+});
 
-export default Store
+export default store;

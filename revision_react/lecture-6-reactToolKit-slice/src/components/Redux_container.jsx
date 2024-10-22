@@ -1,23 +1,24 @@
-import React from 'react'
-import {useSelector, useDispatch} from 'react-redux'
-import { increment,decrement } from '../reduxSlice/ReduxSlice'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { incrementCake, decrementCake, incrementCoco, decrementCoco } from '../reduxSlice/ReduxSlice';
 
-const Redux_container = () => {
+const ReduxContainer = () => {
+  const sliceDataCake = useSelector(state => state.products.NumOfCake);
+  const sliceDataCoco = useSelector(state => state.products.NumOfCoco);
 
-    const sliceData = useSelector(state => state.cake.NumOfCake)
-
-    console.log(sliceData);
-
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
     
   return (
     <div>
-        <h1 className='heading'>This is React redux tool kit</h1>
-        <div>{sliceData}</div>
-        <button className='btn' onClick={() => dispatch(increment())}>Increment</button>
-        <button className='btn' onClick={() => dispatch(decrement())}>Decrement</button>
+      <h1 className='heading'>This is React Redux Toolkit</h1>
+      <div>{sliceDataCake}</div>
+      <button className='btn' onClick={() => dispatch(incrementCake())}>Increment Cake</button>
+      <button className='btn' onClick={() => dispatch(decrementCake())}>Decrement Cake</button>
+      <div>{sliceDataCoco}</div>
+      <button className='btn' onClick={() => dispatch(incrementCoco())}>Increment Coco</button>
+      <button className='btn' onClick={() => dispatch(decrementCoco())}>Decrement Coco</button>
     </div>
-  )
-}
+  );
+};
 
-export default Redux_container
+export default ReduxContainer;
