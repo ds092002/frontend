@@ -1,11 +1,11 @@
-import React from 'react'
-import CocoReducer from './CocoReducer'
-import ThikShakReducer from './ThikShakReducer'
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import CocoReducer from './CocoReducer';
+import ThikShakReducer from './ThikShakReducer';
 
+// Combining the Coco and ThikShak reducers
 const rootReducer = combineReducers({
-  Cocos:CocoReducer,
-  ThikShak:ThikShakReducer
+  Cocos: CocoReducer,
+  ThikShak: ThikShakReducer
 })
 
-export default rootReducer
+export default rootReducer;
