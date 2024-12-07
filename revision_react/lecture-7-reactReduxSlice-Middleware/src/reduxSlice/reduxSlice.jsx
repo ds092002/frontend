@@ -1,16 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// Creating a slice of the Redux store with initial state and reducers
 const reduxSlice = createSlice({
-    name: 'counter',
+    name: 'counter', // Slice name
     initialState: {
-        NumOfCake: 20,
-        NumOfCoco: 30,
+        NumOfCake: 20, // Initial number of cakes
+        NumOfCoco: 30, // Initial number of cocos
     },
+    // Defining reducers for handling state changes
     reducers: {
+        // Increment action: increase both cake and coco counts by 1
         increment: (state) => {
             state.NumOfCake += 1;
             state.NumOfCoco += 1;
         },
+        // Decrement action: decrease both cake and coco counts by 1
         decrement: (state) => {
             state.NumOfCake -= 1;
             state.NumOfCoco -= 1;
@@ -18,5 +22,7 @@ const reduxSlice = createSlice({
     },
 })
 
+// Exporting the action creators
 export const { increment, decrement } = reduxSlice.actions
-export default reduxSlice.reducer // This should export the reducer itself, not the whole slice
+// Exporting only the reducer function from the slice for the store configuration
+export default reduxSlice.reducer
