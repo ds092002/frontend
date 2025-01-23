@@ -1,0 +1,280 @@
+### **Basic React Concepts**
+
+1. **What is React?**  
+   React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the state of applications efficiently.
+
+2. **What are the main features of React?**  
+   - **JSX:** JavaScript XML for writing HTML-like syntax in JavaScript.  
+   - **Components:** Reusable building blocks of a UI.  
+   - **Virtual DOM:** Efficient DOM updates using a virtual representation.  
+   - **State Management:** Handles dynamic data within components.  
+   - **Props:** Pass data between components.  
+
+3. **What is JSX?**  
+   JSX stands for JavaScript XML. It allows us to write HTML inside JavaScript, making the code easier to write and understand.
+
+4. **What is the difference between a functional component and a class component?**  
+   - **Functional Component:** A simple function that returns JSX. Supports hooks for state and side-effects.  
+   - **Class Component:** A ES6 class that extends `React.Component`, requiring a `render()` method to return JSX.
+
+5. **What are props in React?**  
+   Props (short for properties) are used to pass data from a parent component to a child component. Props are immutable.
+
+6. **What is state in React? How is it different from props?**  
+   State is a component's internal data that can change over time. Unlike props, the state is mutable and managed within the component itself.
+
+---
+
+### **Advanced React Concepts**
+
+7. **What is the Virtual DOM, and how does it work?**  
+   The Virtual DOM is a lightweight copy of the real DOM. React updates the Virtual DOM first, compares it with the previous state (diffing), and then efficiently updates only the changed parts in the real DOM.
+
+8. **What are React hooks? Name some commonly used hooks.**  
+   Hooks are functions that allow functional components to use state and lifecycle methods.  
+   Common hooks:  
+   - `useState`: Manages state.  
+   - `useEffect`: Handles side-effects like data fetching.  
+   - `useContext`: Consumes context values.  
+
+9. **What is the use of `useEffect` in React?**  
+   `useEffect` is used for side effects like API calls, DOM manipulation, or subscriptions. It runs after the component renders.
+
+10. **What is a higher-order component (HOC)?**  
+    A HOC is a function that takes a component as input and returns a new enhanced component. Used for reusing logic across components.
+
+11. **What is the importance of keys in React?**  
+    Keys are used in lists to uniquely identify elements, helping React efficiently update or re-render list items.
+
+---
+
+### **React Ecosystem and Miscellaneous**
+
+12. **What is Redux? How does it work with React?**  
+    A JS library for predictable and maintainable global state management
+    
+13. **What are controlled and uncontrolled components?**  
+    - **Controlled Components:** Components where React controls the form elements via state.  
+    - **Uncontrolled Components:** Components where form data is handled by the DOM.
+
+14. **What is React Router? Why do we use it?**  
+    React Router is a library for routing in React applications, allowing navigation between different views or pages.
+
+15. **What is the difference between `React.Fragment` and a `<div>`?**  
+    `React.Fragment` is used to group a list of children without adding extra nodes to the DOM, unlike a `<div>`.
+
+---
+
+### **Behavioral and Practical**
+
+16. **What are the lifecycle methods of a React class component?**  
+    - **Mounting:** `constructor()`, `render()`, `componentDidMount()`.  
+    - **Updating:** `shouldComponentUpdate()`, `componentDidUpdate()`.  
+    - **Unmounting:** `componentWillUnmount()`.
+
+17. **How do you optimize a React application?**  
+    - Using React.memo or PureComponent.  
+    - Avoid unnecessary re-renders with keys and `useCallback`.  
+    - Code splitting with dynamic imports.  
+    - Using lazy loading and React's `Suspense`.  
+
+18. **What is the difference between `useCallback` and `useMemo`?**  
+    - `useCallback`: Memorizes a function.  
+    - `useMemo`: Memorizes a computed value.
+
+19. **How do you handle errors in React?**  
+    By using error boundaries (`componentDidCatch` and `getDerivedStateFromError`) or try-catch blocks in functional components.
+
+20. **Can you explain how React handles form validation?**  
+    React handles form validation either through custom logic (controlled components) or third-party libraries like Formik or React Hook Form.
+
+---
+
+Here are additional **React.js interview questions** with answers to help you further prepare:  
+
+---
+
+### **React Basics**
+
+1. **What are React components? What are the types of components?**  
+   React components are the building blocks of a React application that return JSX to define the UI.  
+   Types:  
+   - **Functional Components:** Plain JavaScript functions.  
+   - **Class Components:** ES6 classes extending `React.Component`.  
+
+2. **What is the difference between a real DOM and a virtual DOM?**  
+   - **Real DOM:** Updates the entire DOM tree, which is slow.  
+   - **Virtual DOM:** Updates only the changed part, improving performance.  
+
+3. **What is the role of the `render()` method in React?**  
+   The `render()` method in class components is used to define what to display on the screen. It returns JSX.
+
+---
+
+### **Props and State**
+
+4. **Can we modify props in a component?**  
+   No, props are read-only and immutable. To modify data, state or callbacks should be used.
+
+5. **What is the difference between stateful and stateless components?**  
+   - **Stateful Components:** Maintain internal state (usually class components or functional components with hooks).  
+   - **Stateless Components:** Do not manage state (typically functional components without hooks).
+
+6. **How is state updated in React?**  
+   State is updated using the `setState` function in class components or `useState` in functional components.  
+
+---
+
+### **Lifecycle and Hooks**
+
+7. **What are React lifecycle methods?**  
+   Lifecycle methods are special methods invoked during the lifecycle of a component:  
+   - **Mounting:** `constructor()`, `render()`, `componentDidMount()`.  
+   - **Updating:** `shouldComponentUpdate()`, `componentDidUpdate()`.  
+   - **Unmounting:** `componentWillUnmount()`.
+
+8. **What is the difference between `useEffect` and `componentDidMount`?**  
+   - `useEffect`: Used in functional components for side effects, runs after every render by default.  
+   - `componentDidMount`: Runs only once after the initial render in class components.
+ 
+9. **How do you clean up side effects in React?**  
+   Use the cleanup function in `useEffect`:  
+   ```jsx
+   useEffect(() => {
+       const timer = setInterval(() => console.log("Running"), 1000);
+       return () => clearInterval(timer); // Cleanup
+   }, []);
+   ```
+
+---
+
+### **Routing and Navigation**
+
+10. **What is the difference between client-side routing and server-side routing?**  
+    - **Client-Side Routing:** Uses JavaScript to update the URL and render views without reloading the page.  
+    - **Server-Side Routing:** Sends requests to the server for each URL change.
+
+11. **How do you implement navigation in React?**  
+    By using **React Router**:  
+    ```jsx
+    import { BrowserRouter, Route, Link } from 'react-router-dom';
+
+    function App() {
+        return (
+            <BrowserRouter>
+                <Link to="/">Home</Link>
+                <Route path="/" component={Home} />
+            </BrowserRouter>
+        );
+    }
+    ```
+
+---
+
+### **State Management**
+
+12. **What is the Context API?**  
+    The Context API is used for state management to pass data through the component tree without using props at every level.  
+
+    Example:  
+    ```jsx
+    const ThemeContext = React.createContext();
+
+    function App() {
+        return (
+            <ThemeContext.Provider value="dark">
+                <Child />
+            </ThemeContext.Provider>
+        );
+    }
+
+    function Child() {
+        const theme = useContext(ThemeContext);
+        return <div>{theme}</div>;
+    }
+    ```
+
+13. **What are Redux actions and reducers?**  
+    - **Actions:** Objects describing what you want to do (e.g., `{ type: 'INCREMENT' }`).  
+    - **Reducers:** Pure functions that take the current state and an action, and return a new state.  
+
+---
+
+### **Performance Optimization**
+
+14. **What is React.memo, and when would you use it?**  
+    `React.memo` is a higher-order component that prevents unnecessary re-renders by memoizing functional components. Use it when a component renders the same output for the same props.  
+
+    Example:  
+    ```jsx
+    const MemoizedComponent = React.memo(MyComponent);
+    ```
+
+15. **What is lazy loading, and how is it implemented in React?**  
+    Lazy loading is a technique to load components or resources only when they are needed. In React, use `React.lazy` and `Suspense`:  
+    ```jsx
+    const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+    function App() {
+        return (
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyComponent />
+            </Suspense>
+        );
+    }
+    ```
+
+---
+
+### **Advanced**
+
+16. **What is server-side rendering (SSR) in React?**  
+    SSR involves rendering React components on the server and sending the HTML to the client. It improves performance and SEO. Tools like **Next.js** are often used for SSR.
+
+17. **What is the difference between `createElement` and JSX?**  
+    - `createElement`: React's native method for creating elements.  
+    - JSX: A syntactic sugar for `createElement` that is more readable.  
+
+    Example:  
+    ```jsx
+    React.createElement('h1', { className: 'title' }, 'Hello');  
+    // JSX equivalent: <h1 className="title">Hello</h1>
+    ```
+
+18. **How do you handle errors in React applications?**  
+    Use Error Boundaries for handling errors in class components:  
+    ```jsx
+    class ErrorBoundary extends React.Component {
+        state = { hasError: false };
+
+        static getDerivedStateFromError() {
+            return { hasError: true };
+        }
+
+        componentDidCatch(error, info) {
+            console.error(error, info);
+        }
+
+        render() {
+            return this.state.hasError ? <h1>Something went wrong</h1> : this.props.children;
+        }
+    }
+    ```
+
+19. **What is React Refs, and how are they used?**  
+    Refs provide a way to directly access DOM elements or components.  
+    ```jsx
+    const inputRef = React.useRef();
+
+    function App() {
+        return <input ref={inputRef} />;
+    }
+    ```
+
+20. **What are React portals?**  
+    React Portals allow rendering children into a DOM node outside the parent component's hierarchy.  
+    ```jsx
+    ReactDOM.createPortal(<Child />, document.getElementById('modal-root'));
+    ```
+
+---
